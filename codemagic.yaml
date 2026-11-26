@@ -6,6 +6,11 @@ workflows:
     environment:
       xcode: latest
     scripts:
+      - name: Verify Xcode Environment
+        script: |
+          xcode-select -p
+          xcodebuild -version
+
       - name: Static Compliance Guard
         script: |
           set -euo pipefail
@@ -13,12 +18,41 @@ workflows:
             echo "ERROR: Forbidden as! / TODO / FIXME found."
             exit 1
           fi
+          plutil -lint Sources/Resources/Info.plist
+          plutil -lint Sources/Resources/PrivacyInfo.xcprivacy
+
+      - name: Inject Live AdMob IDs (If Provided)
+        script: |
+          set -euo pipefail
+          if [ -n "${ADMOB_IOS_APP_ID:-}" ]; then
+            /usr/libexec/PlistBuddy -c "Set :GADApplicationIdentifier $ADMOB_IOS_APP_ID" Sources/Resources/Info.plist
+            echo "Injected Live AdMob App ID."
+          else
+            echo "Using official Google AdMob Test App ID."
+          fi
+          if [ -n "${ADMOB_INTERSTITIAL_UNIT_ID:-}" ]; then
+            /usr/libexec/PlistBuddy -c "Set :AdMobInterstitialUnitID $ADMOB_INTERSTITIAL_UNIT_ID" Sources/Resources/Info.plist \
+              || /usr/libexec/PlistBuddy -c "Add :AdMobInterstitialUnitID string $ADMOB_INTERSTITIAL_UNIT_ID" Sources/Resources/Info.plist
+            echo "Injected Live AdMob Interstitial Unit ID."
+          else
+            echo "Using official Google AdMob Test Interstitial Unit ID."
+          fi
+
       - name: Install XcodeGen & Generate Project
         script: |
+          set -euo pipefail
           brew install xcodegen
           xcodegen generate --spec project.yml
+
+      - name: Resolve Swift Package Dependencies
+        script: |
+          xcodebuild -resolvePackageDependencies \
+            -project ThucDon7Ngay.xcodeproj \
+            -scheme ThucDon7Ngay
+
       - name: Build Unsigned Test IPA
         script: |
+          set -euo pipefail
           xcodebuild \
             -project ThucDon7Ngay.xcodeproj \
             -scheme ThucDon7Ngay \
@@ -26,15 +60,23 @@ workflows:
             -sdk iphoneos \
             -destination 'generic/platform=iOS' \
             -derivedDataPath build \
+            -skipPackagePluginValidation \
+            -skipMacroValidation \
             SWIFT_STRICT_CONCURRENCY=complete \
+            ENABLE_DEBUG_DYLIB=NO \
             CODE_SIGN_STYLE=Manual \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
+            PROVISIONING_PROFILE_SPECIFIER="" \
             DEVELOPMENT_TEAM="" \
             clean build
+
           mkdir -p release/Payload
           cp -R build/Build/Products/Release-iphoneos/ThucDon7Ngay.app release/Payload/
-          cd release && zip -r ThucDon7Ngay-Test-Unsigned.ipa Payload
+          cd release
+          zip -r ThucDon7Ngay-Test-Unsigned.ipa Payload
+          ls -lh ThucDon7Ngay-Test-Unsigned.ipa
+
     artifacts:
       - release/ThucDon7Ngay-Test-Unsigned.ipa
