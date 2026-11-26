@@ -1,0 +1,34 @@
+name: ThucDon7Ngay
+options:
+  bundleIdPrefix: vn.thucdon7ngay
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "16.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_STRICT_CONCURRENCY: complete
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+
+targets:
+  ThucDon7Ngay:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: vn.thucdon7ngay.app
+        INFOPLIST_KEY_CFBundleDisplayName: "Thực Đơn 7 Ngày"
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        SWIFT_OBJC_BRIDGING_HEADER: Sources/CoreC/ThucDonBridging.h
+        HEADER_SEARCH_PATHS: $(SRCROOT)/Sources/CoreC
+
+  ThucDon7NgayTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Tests
+    dependencies:
+      - target: ThucDon7Ngay
