@@ -29,6 +29,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: vn.thucdon7ngay.app
         INFOPLIST_FILE: Sources/Resources/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         SWIFT_OBJC_BRIDGING_HEADER: Sources/CoreC/ThucDonBridging.h
         HEADER_SEARCH_PATHS: $(SRCROOT)/Sources/CoreC
         TARGETED_DEVICE_FAMILY: "1"

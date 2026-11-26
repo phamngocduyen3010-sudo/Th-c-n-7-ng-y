@@ -53,7 +53,7 @@ struct SettingsAndLegalView: View {
                 }
 
                 Section("Hỗ trợ & Pháp lý") {
-                    if let supportURL = URL(string: "https://phamngocduyen3010-sudo.github.io/") {
+                    if let supportURL = URL(string: "https://phamngocduyen3010-sudo.github.io/thucdon7ngay.html") {
                         Link(destination: supportURL) {
                             HStack(spacing: 14) {
                                 settingsIcon("questionmark.circle.fill", color: .blue)
@@ -67,7 +67,7 @@ struct SettingsAndLegalView: View {
                         }
                     }
 
-                    if let privacyURL = URL(string: "https://phamngocduyen3010-sudo.github.io/privacy.html") {
+                    if let privacyURL = URL(string: "https://phamngocduyen3010-sudo.github.io/thucdon7ngay-privacy.html") {
                         Link(destination: privacyURL) {
                             HStack(spacing: 14) {
                                 settingsIcon("hand.raised.fill", color: .indigo)
