@@ -13,30 +13,79 @@ final class MenuAndShoppingTests: XCTestCase {
         throw MenuLoaderError.fileNotFound("menu_vn.json")
     }
 
-    func testLoadVietnameseCatalogContains9Dishes() throws {
+    func testLoadVietnameseCatalogContains120ComponentDishes() throws {
         let catalog = try loadTestCatalog()
         XCTAssertEqual(catalog.regionCode, "vn")
-        XCTAssertEqual(catalog.dishes.count, 9)
+        XCTAssertEqual(catalog.dishes.count, 120)
+
+        XCTAssertEqual(catalog.dishes.filter { $0.slotRole == .stapleRice }.count, 3)
+        XCTAssertEqual(catalog.dishes.filter { $0.slotRole == .breakfastStreet }.count, 12)
+        XCTAssertEqual(catalog.dishes.filter { $0.slotRole == .breakfastHome }.count, 12)
+        XCTAssertEqual(catalog.dishes.filter { $0.slotRole == .mainSavory }.count, 54)
+        XCTAssertEqual(catalog.dishes.filter { $0.slotRole == .soup }.count, 27)
+        XCTAssertEqual(catalog.dishes.filter { $0.slotRole == .fruit }.count, 12)
     }
 
-    func testGenerateWeeklyPlanHas7DaysWithoutConsecutiveDuplicates() throws {
+    func testWeeklyPlanBuildsFullVietnameseTraysWithoutFastFoodInMainMeals() throws {
         let catalog = try loadTestCatalog()
+        let dishById = Dictionary(uniqueKeysWithValues: catalog.dishes.map { ($0.id, $0) })
         let profile = UserNutritionProfile(
             gender: .male,
             age: 28,
             heightCm: 175.0,
             weightKg: 80.0,
             activityLevel: .light,
-            goal: .loseWeight
+            goal: .loseWeight,
+            cuisineRegion: .north,
+            isVegetarian: false
         )
 
         let plan = MenuLoader.generateWeeklyPlan(for: profile, catalog: catalog)
         XCTAssertEqual(plan.days.count, 7)
 
-        for idx in 1..<plan.days.count {
-            XCTAssertNotEqual(plan.days[idx].breakfastId, plan.days[idx - 1].breakfastId)
-            XCTAssertNotEqual(plan.days[idx].lunchId, plan.days[idx - 1].lunchId)
-            XCTAssertNotEqual(plan.days[idx].dinnerId, plan.days[idx - 1].dinnerId)
+        for day in plan.days {
+            let bDish = dishById[day.breakfastId]
+            XCTAssertNotNil(bDish)
+            XCTAssertTrue(bDish?.slotRole == .breakfastStreet || bDish?.slotRole == .breakfastHome)
+
+            for tray in [day.lunchTray, day.dinnerTray] {
+                XCTAssertEqual(dishById[tray.riceId]?.slotRole, .stapleRice)
+                XCTAssertEqual(tray.savoryIds.count, 3)
+                XCTAssertEqual(Set(tray.savoryIds).count, 3)
+                for savId in tray.savoryIds {
+                    XCTAssertEqual(dishById[savId]?.slotRole, .mainSavory)
+                }
+                XCTAssertEqual(dishById[tray.soupId]?.slotRole, .soup)
+                XCTAssertEqual(dishById[tray.fruitId]?.slotRole, .fruit)
+            }
+        }
+    }
+
+    func testVegetarianModeStrictlyExcludesNonVegetarianDishes() throws {
+        let catalog = try loadTestCatalog()
+        let dishById = Dictionary(uniqueKeysWithValues: catalog.dishes.map { ($0.id, $0) })
+
+        for region in VietnameseCuisineRegion.allCases {
+            let vegProfile = UserNutritionProfile(
+                gender: .female,
+                age: 26,
+                heightCm: 160.0,
+                weightKg: 54.0,
+                activityLevel: .light,
+                goal: .maintain,
+                cuisineRegion: region,
+                isVegetarian: true
+            )
+            let plan = MenuLoader.generateWeeklyPlan(for: vegProfile, catalog: catalog)
+            XCTAssertEqual(plan.days.count, 7)
+
+            for day in plan.days {
+                for dishId in day.allDishIds {
+                    let dish = dishById[dishId]
+                    XCTAssertNotNil(dish)
+                    XCTAssertTrue(dish?.isVegetarian == true, "Non-veg dish \(dishId) leaked into vegetarian plan")
+                }
+            }
         }
     }
 

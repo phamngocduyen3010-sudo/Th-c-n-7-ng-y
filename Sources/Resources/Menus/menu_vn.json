@@ -1,20 +1,156 @@
 {
   "regionCode": "vn",
-  "version": "1.0",
+  "version": "3.0",
   "dishes": [
     {
-      "id": "vn_bk_001",
-      "mealTypes": [
-        "breakfast"
+      "id": "vn_rice_001",
+      "slotRole": "staple_rice",
+      "region": "all",
+      "goals": [
+        "maintain",
+        "gainWeight"
       ],
-      "dietTags": [
-        "balanced",
-        "high_protein"
+      "isVegetarian": true,
+      "name": "Cơm trắng dẻo",
+      "prepTimeMinutes": 25,
+      "baseNutrition": {
+        "calories": 190.0,
+        "proteinGrams": 4.0,
+        "carbsGrams": 42.0,
+        "fatGrams": 0.5,
+        "fiberGrams": 1.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_rice_001_1",
+          "name": "Gạo trắng",
+          "amount": 60.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_rice_001_2",
+          "name": "Nước lọc",
+          "amount": 100.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
       ],
+      "steps": [
+        "Vo nhẹ gạo trắng qua hai lần nước sạch để giữ lớp cám mỏng tự nhiên.",
+        "Cho gạo và nước lọc vào nồi cơm điện, bật chế độ nấu chín tiêu chuẩn.",
+        "Ủ cơm thêm 10 phút sau khi bật nút rồi xới tơi trước khi dùng."
+      ]
+    },
+    {
+      "id": "vn_rice_002",
+      "slotRole": "staple_rice",
+      "region": "all",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Cơm gạo lứt mềm",
+      "prepTimeMinutes": 35,
+      "baseNutrition": {
+        "calories": 185.0,
+        "proteinGrams": 4.5,
+        "carbsGrams": 38.0,
+        "fatGrams": 1.5,
+        "fiberGrams": 3.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_rice_002_1",
+          "name": "Gạo lứt",
+          "amount": 55.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_rice_002_2",
+          "name": "Nước lọc",
+          "amount": 120.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Vo sạch gạo lứt rồi ngâm trong nước ấm khoảng 30 phút để hạt gạo nhanh mềm.",
+        "Đổ gạo cùng nước lọc vào nồi cơm điện theo tỷ lệ phù hợp và nấu chín.",
+        "Khi cơm chín, giữ ấm thêm 10 phút rồi xới đều cho tơi hạt."
+      ]
+    },
+    {
+      "id": "vn_rice_003",
+      "slotRole": "staple_rice",
+      "region": "all",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Cơm gạo lứt trộn hạt sen đậu đen",
+      "prepTimeMinutes": 40,
+      "baseNutrition": {
+        "calories": 210.0,
+        "proteinGrams": 7.0,
+        "carbsGrams": 42.0,
+        "fatGrams": 1.5,
+        "fiberGrams": 5.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_rice_003_1",
+          "name": "Gạo lứt",
+          "amount": 45.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_rice_003_2",
+          "name": "Hạt sen tươi",
+          "amount": 20.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_rice_003_3",
+          "name": "Đậu đen",
+          "amount": 15.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_rice_003_4",
+          "name": "Nước lọc",
+          "amount": 130.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Ngâm đậu đen trước 2 giờ, rửa sạch gạo lứt và hạt sen bỏ tâm.",
+        "Cho gạo lứt, đậu đen, hạt sen cùng nước lọc vào nồi nấu chín mềm.",
+        "Ủ cơm 10 phút cho ráo mặt, xới đều để hạt sen và đậu quyện vào cơm."
+      ]
+    },
+    {
+      "id": "vn_bks_001",
+      "slotRole": "breakfast_street",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
       "name": "Phở gà ta ức lườn ít bánh",
       "prepTimeMinutes": 15,
       "baseNutrition": {
-        "calories": 380.0,
+        "calories": 370.0,
         "proteinGrams": 28.0,
         "carbsGrams": 46.0,
         "fatGrams": 8.0,
@@ -22,82 +158,103 @@
       },
       "ingredients": [
         {
-          "id": "ing_bk_001_1",
+          "id": "ing_bks_001_1",
           "name": "Bánh phở tươi",
           "amount": 120.0,
           "unit": "g",
           "category": "Tinh bột"
         },
         {
-          "id": "ing_bk_001_2",
-          "name": "Thịt ức gà luộc",
+          "id": "ing_bks_001_2",
+          "name": "Ức gà phi lê",
           "amount": 110.0,
           "unit": "g",
           "category": "Đạm"
         },
         {
-          "id": "ing_bk_001_3",
-          "name": "Hành lá & rau thơm",
-          "amount": 30.0,
+          "id": "ing_bks_001_3",
+          "name": "Hành lá",
+          "amount": 20.0,
           "unit": "g",
           "category": "Rau củ"
         },
         {
-          "id": "ing_bk_001_4",
-          "name": "Nước dùng gà thanh",
+          "id": "ing_bks_001_4",
+          "name": "Rau mùi",
+          "amount": 15.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bks_001_5",
+          "name": "Nước dùng gà",
           "amount": 350.0,
           "unit": "ml",
           "category": "Gia vị"
         }
       ],
       "steps": [
-        "Chần nhanh bánh phở qua nước sôi rồi cho vào bát.",
-        "Xếp thịt ức gà xé phay, hành lá và rau thơm lên trên.",
+        "Chần nhanh bánh phở tươi qua nước sôi rồi cho vào bát tô.",
+        "Xếp thịt ức gà luộc xé phay cùng hành lá và rau mùi thái nhỏ lên trên.",
         "Chan nước dùng gà nóng đã hớt sạch váng mỡ và thưởng thức."
       ]
     },
     {
-      "id": "vn_bk_002",
-      "mealTypes": [
-        "breakfast"
+      "id": "vn_bks_002",
+      "slotRole": "breakfast_street",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain"
       ],
-      "dietTags": [
-        "balanced",
-        "quick"
-      ],
-      "name": "Bánh mì nguyên cám trứng ốp la & dưa leo",
-      "prepTimeMinutes": 10,
+      "isVegetarian": false,
+      "name": "Bún riêu cua đồng đậu hũ",
+      "prepTimeMinutes": 20,
       "baseNutrition": {
-        "calories": 360.0,
-        "proteinGrams": 18.0,
-        "carbsGrams": 38.0,
-        "fatGrams": 14.0,
-        "fiberGrams": 6.0
+        "calories": 380.0,
+        "proteinGrams": 22.0,
+        "carbsGrams": 48.0,
+        "fatGrams": 11.0,
+        "fiberGrams": 5.0
       },
       "ingredients": [
         {
-          "id": "ing_bk_002_1",
-          "name": "Bánh mì nguyên cám",
-          "amount": 80.0,
+          "id": "ing_bks_002_1",
+          "name": "Bún tươi",
+          "amount": 140.0,
           "unit": "g",
           "category": "Tinh bột"
         },
         {
-          "id": "ing_bk_002_2",
-          "name": "Trứng gà",
-          "amount": 2.0,
-          "unit": "quả",
+          "id": "ing_bks_002_2",
+          "name": "Thịt cua đồng xay",
+          "amount": 80.0,
+          "unit": "g",
           "category": "Đạm"
         },
         {
-          "id": "ing_bk_002_3",
-          "name": "Dưa leo",
-          "amount": 100.0,
+          "id": "ing_bks_002_3",
+          "name": "Đậu hũ",
+          "amount": 60.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bks_002_4",
+          "name": "Cà chua",
+          "amount": 80.0,
           "unit": "g",
           "category": "Rau củ"
         },
         {
-          "id": "ing_bk_002_4",
+          "id": "ing_bks_002_5",
+          "name": "Rau sống ăn kèm",
+          "amount": 80.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bks_002_6",
           "name": "Dầu ô liu",
           "amount": 5.0,
           "unit": "ml",
@@ -105,24 +262,744 @@
         }
       ],
       "steps": [
-        "Áp chảo 2 quả trứng gà với 5 ml dầu ô liu ở lửa vừa.",
-        "Nướng giòn nhẹ bánh mì nguyên cám và rửa sạch, thái lát dưa leo.",
-        "Kẹp trứng cùng dưa leo, rắc thêm chút tiêu xay."
+        "Lọc cua đồng lấy nước nấu sôi lửa nhỏ để đóng mảng riêu nổi lên mặt.",
+        "Xào sơ cà chua với dầu ô liu rồi thả vào nồi nước riêu cùng đậu hũ cắt miếng.",
+        "Cho bún tươi ra bát, chan nước riêu nóng và ăn kèm rau sống."
       ]
     },
     {
-      "id": "vn_bk_003",
-      "mealTypes": [
-        "breakfast"
+      "id": "vn_bks_003",
+      "slotRole": "breakfast_street",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain"
       ],
-      "dietTags": [
-        "high_fiber",
-        "light"
+      "isVegetarian": false,
+      "name": "Bánh đa cá rô đồng rau cải",
+      "prepTimeMinutes": 20,
+      "baseNutrition": {
+        "calories": 380.0,
+        "proteinGrams": 26.0,
+        "carbsGrams": 48.0,
+        "fatGrams": 9.0,
+        "fiberGrams": 4.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_bks_003_1",
+          "name": "Bánh đa đỏ",
+          "amount": 110.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_bks_003_2",
+          "name": "Phi lê cá rô đồng",
+          "amount": 110.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bks_003_3",
+          "name": "Cải ngọt",
+          "amount": 90.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bks_003_4",
+          "name": "Hành lá",
+          "amount": 15.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bks_003_5",
+          "name": "Nước dùng cá",
+          "amount": 350.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_bks_003_6",
+          "name": "Dầu ô liu",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
       ],
+      "steps": [
+        "Áp chảo nhanh phi lê cá rô đồng với chút dầu ô liu và gừng cho thơm vàng.",
+        "Chần bánh đa đỏ và cải ngọt qua nước sôi rồi xếp gọn vào bát.",
+        "Đặt cá rô lên trên, rắc hành lá và chan nước dùng cá nóng."
+      ]
+    },
+    {
+      "id": "vn_bks_004",
+      "slotRole": "breakfast_street",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": true,
+      "name": "Phở chay nấm hương đậu hũ",
+      "prepTimeMinutes": 18,
+      "baseNutrition": {
+        "calories": 340.0,
+        "proteinGrams": 16.0,
+        "carbsGrams": 50.0,
+        "fatGrams": 8.0,
+        "fiberGrams": 5.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_bks_004_1",
+          "name": "Bánh phở tươi",
+          "amount": 130.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_bks_004_2",
+          "name": "Đậu hũ",
+          "amount": 100.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bks_004_3",
+          "name": "Nấm hương tươi",
+          "amount": 70.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bks_004_4",
+          "name": "Hành lá",
+          "amount": 20.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bks_004_5",
+          "name": "Nước dùng rau củ",
+          "amount": 350.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Nấu nước dùng rau củ với quế, hồi và nấm hương tươi khoảng 10 phút.",
+        "Áp chảo sơ đậu hũ cắt lát mỏng cho săn mặt rồi để riêng.",
+        "Chần bánh phở cho vào bát, xếp đậu hũ, nấm, hành lá rồi chan nước dùng nóng."
+      ]
+    },
+    {
+      "id": "vn_bks_005",
+      "slotRole": "breakfast_street",
+      "region": "central",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Bún bò Huế thịt nạc bắp ít mỡ",
+      "prepTimeMinutes": 20,
+      "baseNutrition": {
+        "calories": 415.0,
+        "proteinGrams": 29.0,
+        "carbsGrams": 50.0,
+        "fatGrams": 11.0,
+        "fiberGrams": 4.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_bks_005_1",
+          "name": "Bún sợi to",
+          "amount": 150.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_bks_005_2",
+          "name": "Thịt bắp bò",
+          "amount": 115.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bks_005_3",
+          "name": "Giá đỗ",
+          "amount": 50.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bks_005_4",
+          "name": "Hành lá",
+          "amount": 20.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bks_005_5",
+          "name": "Nước dùng sả bò",
+          "amount": 360.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Thái mỏng thịt bắp bò đã ninh mềm và chần nhanh bún sợi to qua nước sôi.",
+        "Xếp bún, thịt bò, hành lá và giá đỗ vào bát.",
+        "Chan nước dùng sả bò nóng thơm, ăn kèm rau sống tùy thích."
+      ]
+    },
+    {
+      "id": "vn_bks_006",
+      "slotRole": "breakfast_street",
+      "region": "central",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Mì Quảng gà ta tôm tươi",
+      "prepTimeMinutes": 20,
+      "baseNutrition": {
+        "calories": 430.0,
+        "proteinGrams": 28.0,
+        "carbsGrams": 52.0,
+        "fatGrams": 12.0,
+        "fiberGrams": 4.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_bks_006_1",
+          "name": "Sợi mì Quảng",
+          "amount": 140.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_bks_006_2",
+          "name": "Ức gà phi lê",
+          "amount": 75.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bks_006_3",
+          "name": "Tôm tươi",
+          "amount": 55.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bks_006_4",
+          "name": "Rau sống ăn kèm",
+          "amount": 80.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bks_006_5",
+          "name": "Lạc rang",
+          "amount": 10.0,
+          "unit": "g",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_bks_006_6",
+          "name": "Dầu ô liu",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Xào săn ức gà và tôm tươi với nghệ, hành tím cùng dầu ô liu rồi thêm ít nước om chín.",
+        "Lót rau sống dưới đáy bát rồi cho sợi mì Quảng đã trụng lên trên.",
+        "Múc phần nhân gà tôm cùng nước nhưn xâm xấp, rắc lạc rang giã dập."
+      ]
+    },
+    {
+      "id": "vn_bks_007",
+      "slotRole": "breakfast_street",
+      "region": "central",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Bánh canh chả cá Nha Trang",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 375.0,
+        "proteinGrams": 24.0,
+        "carbsGrams": 52.0,
+        "fatGrams": 8.0,
+        "fiberGrams": 3.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_bks_007_1",
+          "name": "Sợi bánh canh gạo",
+          "amount": 140.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_bks_007_2",
+          "name": "Chả cá thu hấp",
+          "amount": 110.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bks_007_3",
+          "name": "Hành lá",
+          "amount": 20.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bks_007_4",
+          "name": "Xà lách",
+          "amount": 50.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bks_007_5",
+          "name": "Nước dùng cá",
+          "amount": 350.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Đun sôi nước dùng cá thanh ngọt rồi cho sợi bánh canh vào nấu mềm.",
+        "Thái lát vừa ăn chả cá thu hấp và xếp vào bát bánh canh.",
+        "Rắc hành lá, tiêu xay và dùng nóng cùng rau xà lách thái nhỏ."
+      ]
+    },
+    {
+      "id": "vn_bks_008",
+      "slotRole": "breakfast_street",
+      "region": "central",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": true,
+      "name": "Mì Quảng chay nấm đùi gà đậu hũ",
+      "prepTimeMinutes": 18,
+      "baseNutrition": {
+        "calories": 365.0,
+        "proteinGrams": 17.0,
+        "carbsGrams": 52.0,
+        "fatGrams": 10.0,
+        "fiberGrams": 6.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_bks_008_1",
+          "name": "Sợi mì Quảng",
+          "amount": 135.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_bks_008_2",
+          "name": "Đậu hũ",
+          "amount": 100.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bks_008_3",
+          "name": "Nấm đùi gà",
+          "amount": 80.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bks_008_4",
+          "name": "Rau sống ăn kèm",
+          "amount": 80.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bks_008_5",
+          "name": "Lạc rang",
+          "amount": 10.0,
+          "unit": "g",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_bks_008_6",
+          "name": "Dầu ô liu",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Xào nấm đùi gà và đậu hũ cắt khối với dầu ô liu, bột nghệ và nước tương nhạt.",
+        "Thêm 150 ml nước lọc đun nhỏ lửa 6 phút cho thấm gia vị thành nước nhưn.",
+        "Trụng sợi mì Quảng xếp lên rau sống, chan nước nhưn và rắc lạc rang."
+      ]
+    },
+    {
+      "id": "vn_bks_009",
+      "slotRole": "breakfast_street",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Hủ tiếu Nam Vang tôm thịt nạc",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 385.0,
+        "proteinGrams": 26.0,
+        "carbsGrams": 50.0,
+        "fatGrams": 9.0,
+        "fiberGrams": 3.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_bks_009_1",
+          "name": "Sợi hủ tiếu tươi",
+          "amount": 130.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_bks_009_2",
+          "name": "Thịt nạc vai",
+          "amount": 70.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bks_009_3",
+          "name": "Tôm tươi",
+          "amount": 60.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bks_009_4",
+          "name": "Giá đỗ",
+          "amount": 50.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bks_009_5",
+          "name": "Hẹ lá",
+          "amount": 20.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bks_009_6",
+          "name": "Nước dùng xương trong",
+          "amount": 350.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Luộc chín tôm tươi và thịt nạc vai, thái lát mỏng vừa ăn.",
+        "Trụng nhanh sợi hủ tiếu, giá đỗ và hẹ lá qua nước sôi rồi cho vào bát.",
+        "Xếp tôm, thịt lên mặt và chan nước dùng xương trong nóng hổi."
+      ]
+    },
+    {
+      "id": "vn_bks_010",
+      "slotRole": "breakfast_street",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Bánh canh cua tôm tươi",
+      "prepTimeMinutes": 20,
+      "baseNutrition": {
+        "calories": 380.0,
+        "proteinGrams": 25.0,
+        "carbsGrams": 50.0,
+        "fatGrams": 9.0,
+        "fiberGrams": 3.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_bks_010_1",
+          "name": "Sợi bánh canh gạo",
+          "amount": 140.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_bks_010_2",
+          "name": "Thịt cua biển",
+          "amount": 60.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bks_010_3",
+          "name": "Tôm tươi",
+          "amount": 60.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bks_010_4",
+          "name": "Nấm rơm",
+          "amount": 50.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bks_010_5",
+          "name": "Hành lá",
+          "amount": 15.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bks_010_6",
+          "name": "Nước dùng rau củ",
+          "amount": 350.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Nấu sôi nước dùng cùng nấm rơm bổ đôi và tạo độ sánh nhẹ bằng chút bột năng.",
+        "Cho tôm tươi bóc vỏ và sợi bánh canh vào đun chín khoảng 3 phút.",
+        "Múc ra bát, phủ thịt cua lên trên, rắc hành lá và tiêu xay."
+      ]
+    },
+    {
+      "id": "vn_bks_011",
+      "slotRole": "breakfast_street",
+      "region": "south",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Bún cá lóc miền Tây rau đắng",
+      "prepTimeMinutes": 18,
+      "baseNutrition": {
+        "calories": 390.0,
+        "proteinGrams": 27.0,
+        "carbsGrams": 48.0,
+        "fatGrams": 10.0,
+        "fiberGrams": 5.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_bks_011_1",
+          "name": "Bún tươi",
+          "amount": 145.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_bks_011_2",
+          "name": "Phi lê cá lóc",
+          "amount": 120.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bks_011_3",
+          "name": "Giá đỗ",
+          "amount": 50.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bks_011_4",
+          "name": "Rau sống ăn kèm",
+          "amount": 70.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bks_011_5",
+          "name": "Nước dùng cá",
+          "amount": 350.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_bks_011_6",
+          "name": "Dầu ô liu",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Xào nhanh phi lê cá lóc với nghệ tươi và dầu ô liu cho thịt săn thơm.",
+        "Cho bún tươi cùng giá đỗ đã trụng vào bát tô.",
+        "Xếp cá lóc lên trên, chan nước dùng cá nấu sả nóng và ăn kèm rau sống."
+      ]
+    },
+    {
+      "id": "vn_bks_012",
+      "slotRole": "breakfast_street",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": true,
+      "name": "Hủ tiếu chay nấm rơm củ cải",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 330.0,
+        "proteinGrams": 15.0,
+        "carbsGrams": 52.0,
+        "fatGrams": 7.0,
+        "fiberGrams": 5.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_bks_012_1",
+          "name": "Sợi hủ tiếu tươi",
+          "amount": 130.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_bks_012_2",
+          "name": "Đậu hũ",
+          "amount": 95.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bks_012_3",
+          "name": "Nấm rơm",
+          "amount": 70.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bks_012_4",
+          "name": "Củ cải trắng",
+          "amount": 60.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bks_012_5",
+          "name": "Giá đỗ",
+          "amount": 50.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bks_012_6",
+          "name": "Nước dùng rau củ",
+          "amount": 350.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Hầm củ cải trắng và nấm rơm trong nước dùng rau củ khoảng 10 phút cho ngọt nước.",
+        "Trụng nhanh sợi hủ tiếu tươi và giá đỗ rồi cho vào bát.",
+        "Xếp đậu hũ, nấm rơm, củ cải lên trên và chan nước dùng nóng."
+      ]
+    },
+    {
+      "id": "vn_bkh_001",
+      "slotRole": "breakfast_home",
+      "region": "north",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Xôi đỗ xanh ruốc thịt nạc",
+      "prepTimeMinutes": 12,
+      "baseNutrition": {
+        "calories": 385.0,
+        "proteinGrams": 18.0,
+        "carbsGrams": 56.0,
+        "fatGrams": 10.0,
+        "fiberGrams": 4.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_bkh_001_1",
+          "name": "Gạo nếp đã đồ",
+          "amount": 120.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_bkh_001_2",
+          "name": "Đậu xanh tách vỏ hấp",
+          "amount": 50.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_bkh_001_3",
+          "name": "Ruốc thịt nạc",
+          "amount": 30.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bkh_001_4",
+          "name": "Dưa leo",
+          "amount": 70.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bkh_001_5",
+          "name": "Dầu ô liu",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Hấp nóng xôi gạo nếp cùng đậu xanh tách vỏ tán tơi trong 5 phút.",
+        "Trộn nhẹ chút dầu ô liu để hạt xôi bóng mềm rồi múc ra bát.",
+        "Rắc ruốc thịt nạc lên trên và ăn kèm dưa leo thái lát."
+      ]
+    },
+    {
+      "id": "vn_bkh_002",
+      "slotRole": "breakfast_home",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
       "name": "Cháo yến mạch thịt nạc bằm nấm hương",
       "prepTimeMinutes": 15,
       "baseNutrition": {
-        "calories": 340.0,
+        "calories": 330.0,
         "proteinGrams": 22.0,
         "carbsGrams": 42.0,
         "fatGrams": 8.0,
@@ -130,82 +1007,89 @@
       },
       "ingredients": [
         {
-          "id": "ing_bk_003_1",
+          "id": "ing_bkh_002_1",
           "name": "Yến mạch cán dẹt",
           "amount": 60.0,
           "unit": "g",
           "category": "Tinh bột"
         },
         {
-          "id": "ing_bk_003_2",
-          "name": "Thịt nạc vai bằm",
+          "id": "ing_bkh_002_2",
+          "name": "Thịt nạc vai",
           "amount": 90.0,
           "unit": "g",
           "category": "Đạm"
         },
         {
-          "id": "ing_bk_003_3",
+          "id": "ing_bkh_002_3",
           "name": "Nấm hương tươi",
           "amount": 50.0,
           "unit": "g",
           "category": "Rau củ"
         },
         {
-          "id": "ing_bk_003_4",
-          "name": "Hành lá & tiêu",
+          "id": "ing_bkh_002_4",
+          "name": "Hành lá",
           "amount": 15.0,
-          "unit": "g",
-          "category": "Gia vị"
-        }
-      ],
-      "steps": [
-        "Xào sơ thịt nạc bằm với nấm hương thái nhỏ trong 3 phút.",
-        "Cho nước và yến mạch vào nấu sôi nhẹ khoảng 5 phút đến khi sánh.",
-        "Thêm hành lá, nêm nhạt và dùng nóng."
-      ]
-    },
-    {
-      "id": "vn_lu_001",
-      "mealTypes": [
-        "lunch"
-      ],
-      "dietTags": [
-        "high_protein",
-        "balanced"
-      ],
-      "name": "Cơm gạo lứt ức gà áp chảo & cải ngọt luộc",
-      "prepTimeMinutes": 20,
-      "baseNutrition": {
-        "calories": 520.0,
-        "proteinGrams": 42.0,
-        "carbsGrams": 56.0,
-        "fatGrams": 12.0,
-        "fiberGrams": 7.0
-      },
-      "ingredients": [
-        {
-          "id": "ing_lu_001_1",
-          "name": "Gạo lứt (nấu chín)",
-          "amount": 160.0,
-          "unit": "g",
-          "category": "Tinh bột"
-        },
-        {
-          "id": "ing_lu_001_2",
-          "name": "Ức gà phi lê",
-          "amount": 150.0,
-          "unit": "g",
-          "category": "Đạm"
-        },
-        {
-          "id": "ing_lu_001_3",
-          "name": "Cải ngọt",
-          "amount": 180.0,
           "unit": "g",
           "category": "Rau củ"
         },
         {
-          "id": "ing_lu_001_4",
+          "id": "ing_bkh_002_5",
+          "name": "Nước lọc",
+          "amount": 320.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Xào sơ thịt nạc vai bằm nhỏ với nấm hương thái lát trong 3 phút.",
+        "Thêm nước lọc và yến mạch cán dẹt, đun sôi nhẹ 5 phút đến khi sánh mịn.",
+        "Nêm nhạt, rắc hành lá và tiêu xay rồi dùng nóng."
+      ]
+    },
+    {
+      "id": "vn_bkh_003",
+      "slotRole": "breakfast_home",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Bánh mì nguyên cám trứng ốp la & dưa leo",
+      "prepTimeMinutes": 10,
+      "baseNutrition": {
+        "calories": 360.0,
+        "proteinGrams": 18.0,
+        "carbsGrams": 40.0,
+        "fatGrams": 14.0,
+        "fiberGrams": 6.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_bkh_003_1",
+          "name": "Bánh mì nguyên cám",
+          "amount": 80.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_bkh_003_2",
+          "name": "Trứng gà",
+          "amount": 2.0,
+          "unit": "quả",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bkh_003_3",
+          "name": "Dưa leo",
+          "amount": 100.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bkh_003_4",
           "name": "Dầu ô liu",
           "amount": 5.0,
           "unit": "ml",
@@ -213,53 +1097,304 @@
         }
       ],
       "steps": [
-        "Ướp ức gà với chút muối, tiêu và tỏi băm trong 10 phút.",
-        "Áp chảo ức gà với dầu ô liu mỗi mặt 4–5 phút đến khi chín vàng.",
-        "Luộc cải ngọt vừa chín tới và dùng kèm cơm gạo lứt."
+        "Áp chảo 2 quả trứng gà cùng dầu ô liu trên lửa vừa đến khi chín tới.",
+        "Nướng giòn nhẹ bánh mì nguyên cám và thái lát dưa leo sạch.",
+        "Kẹp trứng và dưa leo vào bánh mì, rắc thêm chút tiêu xay."
       ]
     },
     {
-      "id": "vn_lu_002",
-      "mealTypes": [
-        "lunch"
+      "id": "vn_bkh_004",
+      "slotRole": "breakfast_home",
+      "region": "north",
+      "goals": [
+        "maintain",
+        "gainWeight"
       ],
-      "dietTags": [
-        "omega3",
-        "balanced"
-      ],
-      "name": "Cá hồi áp chảo, khoai lang luộc & bông cải xanh",
-      "prepTimeMinutes": 20,
+      "isVegetarian": true,
+      "name": "Xôi đỗ xanh vừng lạc chay",
+      "prepTimeMinutes": 12,
       "baseNutrition": {
-        "calories": 560.0,
-        "proteinGrams": 36.0,
-        "carbsGrams": 48.0,
-        "fatGrams": 22.0,
-        "fiberGrams": 8.0
+        "calories": 395.0,
+        "proteinGrams": 14.0,
+        "carbsGrams": 58.0,
+        "fatGrams": 12.0,
+        "fiberGrams": 5.5
       },
       "ingredients": [
         {
-          "id": "ing_lu_002_1",
-          "name": "Khoai lang",
-          "amount": 180.0,
+          "id": "ing_bkh_004_1",
+          "name": "Gạo nếp đã đồ",
+          "amount": 125.0,
           "unit": "g",
           "category": "Tinh bột"
         },
         {
-          "id": "ing_lu_002_2",
-          "name": "Phi lê cá hồi",
+          "id": "ing_bkh_004_2",
+          "name": "Đậu xanh tách vỏ hấp",
+          "amount": 55.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_bkh_004_3",
+          "name": "Lạc rang",
+          "amount": 20.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bkh_004_4",
+          "name": "Dưa leo",
+          "amount": 70.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bkh_004_5",
+          "name": "Vừng rang",
+          "amount": 5.0,
+          "unit": "g",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Hấp nóng lại xôi nếp và đậu xanh tách vỏ trong 5 phút cho mềm dẻo.",
+        "Giã dập lạc rang trộn cùng vừng rang và một chút muối tinh.",
+        "Múc xôi ra bát, rắc muối vừng lạc lên trên và ăn kèm dưa leo."
+      ]
+    },
+    {
+      "id": "vn_bkh_005",
+      "slotRole": "breakfast_home",
+      "region": "central",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Khoai lang luộc trứng gà & sữa đậu nành",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 365.0,
+        "proteinGrams": 19.0,
+        "carbsGrams": 48.0,
+        "fatGrams": 11.0,
+        "fiberGrams": 6.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_bkh_005_1",
+          "name": "Khoai lang",
+          "amount": 160.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_bkh_005_2",
+          "name": "Trứng gà",
+          "amount": 2.0,
+          "unit": "quả",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bkh_005_3",
+          "name": "Sữa đậu nành không đường",
+          "amount": 200.0,
+          "unit": "ml",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bkh_005_4",
+          "name": "Cà chua bi",
+          "amount": 60.0,
+          "unit": "g",
+          "category": "Rau củ"
+        }
+      ],
+      "steps": [
+        "Rửa sạch khoai lang và hấp chín mềm trong khoảng 15 phút.",
+        "Luộc trứng gà trong 7 phút rồi ngâm nước mát để dễ bóc vỏ.",
+        "Dùng khoai lang, trứng luộc cùng cà chua bi và một ly sữa đậu nành ấm."
+      ]
+    },
+    {
+      "id": "vn_bkh_006",
+      "slotRole": "breakfast_home",
+      "region": "central",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Bánh mì kẹp chả lụa rau thơm",
+      "prepTimeMinutes": 8,
+      "baseNutrition": {
+        "calories": 375.0,
+        "proteinGrams": 20.0,
+        "carbsGrams": 44.0,
+        "fatGrams": 13.0,
+        "fiberGrams": 4.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_bkh_006_1",
+          "name": "Bánh mì",
+          "amount": 85.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_bkh_006_2",
+          "name": "Chả lụa",
+          "amount": 85.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bkh_006_3",
+          "name": "Dưa leo",
+          "amount": 70.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bkh_006_4",
+          "name": "Rau mùi",
+          "amount": 15.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bkh_006_5",
+          "name": "Nước tương",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Nướng nóng giòn bánh mì trong 3 phút rồi rạch dọc thân bánh.",
+        "Thái lát vừa ăn chả lụa và dưa leo, rửa sạch rau mùi để ráo.",
+        "Xếp chả lụa, dưa leo, rau mùi vào bánh mì, rưới vài giọt nước tương và tiêu."
+      ]
+    },
+    {
+      "id": "vn_bkh_007",
+      "slotRole": "breakfast_home",
+      "region": "central",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Cháo cá lóc đậu xanh hành gừng",
+      "prepTimeMinutes": 20,
+      "baseNutrition": {
+        "calories": 335.0,
+        "proteinGrams": 24.0,
+        "carbsGrams": 44.0,
+        "fatGrams": 7.0,
+        "fiberGrams": 4.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_bkh_007_1",
+          "name": "Gạo trắng",
+          "amount": 45.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_bkh_007_2",
+          "name": "Đậu xanh tách vỏ",
+          "amount": 20.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_bkh_007_3",
+          "name": "Phi lê cá lóc",
+          "amount": 100.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bkh_007_4",
+          "name": "Hành lá",
+          "amount": 20.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bkh_007_5",
+          "name": "Gừng tươi",
+          "amount": 5.0,
+          "unit": "g",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_bkh_007_6",
+          "name": "Nước lọc",
+          "amount": 400.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Vo gạo trắng và đậu xanh tách vỏ, nấu với nước lọc đến khi nhừ thành cháo.",
+        "Áp chảo sơ phi lê cá lóc với gừng thái sợi cho thơm rồi cho vào nồi cháo.",
+        "Nêm gia vị nhạt, rắc hành lá và thưởng thức khi còn nóng."
+      ]
+    },
+    {
+      "id": "vn_bkh_008",
+      "slotRole": "breakfast_home",
+      "region": "central",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": true,
+      "name": "Đậu hũ sốt cà chua ăn kèm bánh mì",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 345.0,
+        "proteinGrams": 17.0,
+        "carbsGrams": 44.0,
+        "fatGrams": 11.0,
+        "fiberGrams": 5.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_bkh_008_1",
+          "name": "Bánh mì nguyên cám",
+          "amount": 80.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_bkh_008_2",
+          "name": "Đậu hũ",
           "amount": 140.0,
           "unit": "g",
           "category": "Đạm"
         },
         {
-          "id": "ing_lu_002_3",
-          "name": "Bông cải xanh",
-          "amount": 150.0,
+          "id": "ing_bkh_008_3",
+          "name": "Cà chua",
+          "amount": 120.0,
           "unit": "g",
           "category": "Rau củ"
         },
         {
-          "id": "ing_lu_002_4",
+          "id": "ing_bkh_008_4",
+          "name": "Hành lá",
+          "amount": 15.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bkh_008_5",
           "name": "Dầu ô liu",
           "amount": 5.0,
           "unit": "ml",
@@ -267,222 +1402,4073 @@
         }
       ],
       "steps": [
-        "Hấp hoặc luộc chín khoai lang và bông cải xanh.",
-        "Áp chảo cá hồi mặt da trước khoảng 4 phút, trở mặt thêm 2–3 phút.",
-        "Bày ra đĩa, vắt nhẹ chút chanh tươi nếu thích."
+        "Xào nhuyễn cà chua thái hạt lựu với dầu ô liu và chút nước tương nhạt.",
+        "Cho đậu hũ cắt miếng nhỏ vào rim nhẹ 5 phút cho thấm sốt cà chua.",
+        "Rắc hành lá và ăn kèm bánh mì nguyên cám nướng ấm."
       ]
     },
     {
-      "id": "vn_lu_003",
-      "mealTypes": [
-        "lunch"
+      "id": "vn_bkh_009",
+      "slotRole": "breakfast_home",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain"
       ],
-      "dietTags": [
-        "balanced",
-        "high_iron"
-      ],
-      "name": "Thịt bò xào cần tây hành tây & cơm trắng",
+      "isVegetarian": false,
+      "name": "Cháo tôm tươi bí đỏ hành lá",
       "prepTimeMinutes": 18,
       "baseNutrition": {
-        "calories": 540.0,
-        "proteinGrams": 35.0,
-        "carbsGrams": 60.0,
-        "fatGrams": 15.0,
-        "fiberGrams": 5.0
+        "calories": 340.0,
+        "proteinGrams": 24.0,
+        "carbsGrams": 45.0,
+        "fatGrams": 7.0,
+        "fiberGrams": 4.0
       },
       "ingredients": [
         {
-          "id": "ing_lu_003_1",
-          "name": "Cơm trắng",
-          "amount": 170.0,
+          "id": "ing_bkh_009_1",
+          "name": "Gạo trắng",
+          "amount": 50.0,
           "unit": "g",
           "category": "Tinh bột"
         },
         {
-          "id": "ing_lu_003_2",
-          "name": "Thịt thăn bò",
-          "amount": 130.0,
+          "id": "ing_bkh_009_2",
+          "name": "Tôm tươi",
+          "amount": 110.0,
           "unit": "g",
           "category": "Đạm"
         },
         {
-          "id": "ing_lu_003_3",
-          "name": "Cần tây & hành tây",
-          "amount": 160.0,
+          "id": "ing_bkh_009_3",
+          "name": "Bí đỏ",
+          "amount": 80.0,
           "unit": "g",
           "category": "Rau củ"
         },
         {
-          "id": "ing_lu_003_4",
-          "name": "Dầu ăn thực vật",
+          "id": "ing_bkh_009_4",
+          "name": "Hành lá",
+          "amount": 15.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bkh_009_5",
+          "name": "Dầu ô liu",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_bkh_009_6",
+          "name": "Nước lọc",
+          "amount": 380.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Nấu gạo trắng cùng bí đỏ cắt hạt lựu với nước lọc đến khi cháo sánh nhừ.",
+        "Bóc vỏ tôm tươi, thái nhỏ và đảo nhanh với dầu ô liu trong 2 phút.",
+        "Cho tôm vào nồi cháo đun sôi lại, nêm nhạt và rắc hành lá."
+      ]
+    },
+    {
+      "id": "vn_bkh_010",
+      "slotRole": "breakfast_home",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Bánh mì nguyên cám kẹp ức gà áp chảo",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 360.0,
+        "proteinGrams": 28.0,
+        "carbsGrams": 40.0,
+        "fatGrams": 10.0,
+        "fiberGrams": 6.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_bkh_010_1",
+          "name": "Bánh mì nguyên cám",
+          "amount": 80.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_bkh_010_2",
+          "name": "Ức gà phi lê",
+          "amount": 100.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bkh_010_3",
+          "name": "Xà lách",
+          "amount": 40.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bkh_010_4",
+          "name": "Cà chua",
+          "amount": 60.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bkh_010_5",
+          "name": "Dầu ô liu",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Thái lát mỏng ức gà phi lê, ướp chút muối tiêu rồi áp chảo với dầu ô liu 6 phút.",
+        "Nướng giòn nhẹ bánh mì nguyên cám, rửa sạch xà lách và thái lát cà chua.",
+        "Kẹp rau và ức gà vào bánh mì, dùng ngay khi còn ấm."
+      ]
+    },
+    {
+      "id": "vn_bkh_011",
+      "slotRole": "breakfast_home",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Bắp luộc trứng gà luộc & dưa leo",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 350.0,
+        "proteinGrams": 17.0,
+        "carbsGrams": 46.0,
+        "fatGrams": 11.0,
+        "fiberGrams": 6.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_bkh_011_1",
+          "name": "Ngô ngọt tươi",
+          "amount": 180.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_bkh_011_2",
+          "name": "Trứng gà",
+          "amount": 2.0,
+          "unit": "quả",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bkh_011_3",
+          "name": "Dưa leo",
+          "amount": 100.0,
+          "unit": "g",
+          "category": "Rau củ"
+        }
+      ],
+      "steps": [
+        "Luộc chín ngô ngọt trong khoảng 12 phút rồi vớt ra để ráo.",
+        "Luộc 2 quả trứng gà trong 7 phút cho lòng đào hoặc chín hẳn tùy thích.",
+        "Bày ngô, trứng bóc vỏ cùng dưa leo thái miếng để dùng bữa sáng gọn nhẹ."
+      ]
+    },
+    {
+      "id": "vn_bkh_012",
+      "slotRole": "breakfast_home",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": true,
+      "name": "Cháo yến mạch đậu hũ nấm rơm chay",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 330.0,
+        "proteinGrams": 16.0,
+        "carbsGrams": 46.0,
+        "fatGrams": 9.0,
+        "fiberGrams": 7.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_bkh_012_1",
+          "name": "Yến mạch cán dẹt",
+          "amount": 65.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_bkh_012_2",
+          "name": "Đậu hũ",
+          "amount": 110.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_bkh_012_3",
+          "name": "Nấm rơm",
+          "amount": 70.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bkh_012_4",
+          "name": "Hành lá",
+          "amount": 15.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_bkh_012_5",
+          "name": "Dầu ô liu",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_bkh_012_6",
+          "name": "Nước lọc",
+          "amount": 320.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Xào nhanh nấm rơm cắt lát với dầu ô liu trong 2 phút cho dậy mùi.",
+        "Cho nước lọc, yến mạch cán dẹt và đậu hũ cắt hạt lựu vào đun sôi nhẹ 5 phút.",
+        "Nêm nhạt bằng chút nước tương, rắc hành lá và thưởng thức nóng."
+      ]
+    },
+    {
+      "id": "vn_sav_001",
+      "slotRole": "main_savory",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Ức gà áp chảo lá chanh",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 140.0,
+        "proteinGrams": 24.0,
+        "carbsGrams": 2.0,
+        "fatGrams": 4.0,
+        "fiberGrams": 0.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_001_1",
+          "name": "Ức gà phi lê",
+          "amount": 100.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_001_2",
+          "name": "Lá chanh",
+          "amount": 5.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_001_3",
+          "name": "Dầu ô liu",
+          "amount": 3.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_001_4",
+          "name": "Nước mắm",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Thái lát vừa ăn ức gà phi lê, ướp với chút nước mắm và tiêu xay trong 10 phút.",
+        "Làm nóng chảo với dầu ô liu, áp chảo ức gà mỗi mặt 3 phút đến khi vàng đều.",
+        "Rắc lá chanh thái chỉ đảo nhanh 20 giây rồi tắt bếp bày ra đĩa."
+      ]
+    },
+    {
+      "id": "vn_sav_002",
+      "slotRole": "main_savory",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Tôm đồng rang lá chanh ít dầu",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 130.0,
+        "proteinGrams": 20.0,
+        "carbsGrams": 3.0,
+        "fatGrams": 4.0,
+        "fiberGrams": 0.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_002_1",
+          "name": "Tôm đồng tươi",
+          "amount": 100.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_002_2",
+          "name": "Lá chanh",
+          "amount": 5.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_002_3",
+          "name": "Dầu ô liu",
+          "amount": 3.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_002_4",
+          "name": "Nước mắm",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Cắt râu, rửa sạch tôm đồng với nước muối loãng rồi để thật ráo.",
+        "Đảo tôm trên chảo nóng với dầu ô liu đến khi vỏ chuyển đỏ cam và săn lại.",
+        "Nêm nước mắm nhạt, đảo khô mặt rồi rắc lá chanh thái nhỏ trước khi tắt bếp."
+      ]
+    },
+    {
+      "id": "vn_sav_003",
+      "slotRole": "main_savory",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Cá trắm kho riềng nhạt",
+      "prepTimeMinutes": 25,
+      "baseNutrition": {
+        "calories": 150.0,
+        "proteinGrams": 22.0,
+        "carbsGrams": 4.0,
+        "fatGrams": 5.0,
+        "fiberGrams": 1.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_003_1",
+          "name": "Cá trắm cắt khúc",
+          "amount": 110.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_003_2",
+          "name": "Riềng tươi",
+          "amount": 20.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_003_3",
+          "name": "Nước mắm",
+          "amount": 8.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_003_4",
+          "name": "Nước lọc",
+          "amount": 100.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Lót riềng thái lát dưới đáy nồi rồi xếp cá trắm đã rửa sạch lên trên.",
+        "Thêm nước mắm, chút tiêu và nước lọc xâm xấp mặt cá, đun sôi rồi hạ lửa nhỏ.",
+        "Kho liu riu khoảng 20 phút cho cá săn thịt và nước kho sánh nhẹ."
+      ]
+    },
+    {
+      "id": "vn_sav_004",
+      "slotRole": "main_savory",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Đậu hũ nhồi thịt nạc sốt cà chua",
+      "prepTimeMinutes": 20,
+      "baseNutrition": {
+        "calories": 160.0,
+        "proteinGrams": 17.0,
+        "carbsGrams": 7.0,
+        "fatGrams": 7.0,
+        "fiberGrams": 2.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_004_1",
+          "name": "Đậu hũ",
+          "amount": 80.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_004_2",
+          "name": "Thịt nạc vai",
+          "amount": 45.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_004_3",
+          "name": "Cà chua",
+          "amount": 70.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_004_4",
+          "name": "Hành lá",
+          "amount": 10.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_004_5",
+          "name": "Dầu ô liu",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Trộn thịt nạc vai bằm với hành lá, chút tiêu rồi nhồi gọn vào giữa miếng đậu hũ.",
+        "Áp chảo sơ mặt nhồi thịt với dầu ô liu cho định hình chắc chắn.",
+        "Xào nhuyễn cà chua thành sốt, thả đậu vào om nhỏ lửa 8 phút rồi rắc hành lá."
+      ]
+    },
+    {
+      "id": "vn_sav_005",
+      "slotRole": "main_savory",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Thịt bò xào cần tây tỏi tây",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 160.0,
+        "proteinGrams": 20.0,
+        "carbsGrams": 6.0,
+        "fatGrams": 6.0,
+        "fiberGrams": 2.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_005_1",
+          "name": "Thịt thăn bò",
+          "amount": 85.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_005_2",
+          "name": "Cần tây",
+          "amount": 60.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_005_3",
+          "name": "Tỏi tây",
+          "amount": 40.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_005_4",
+          "name": "Dầu ô liu",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_005_5",
+          "name": "Nước tương",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Thái mỏng thịt thăn bò ngang thớ, ướp nhanh với nước tương và tỏi băm.",
+        "Xào thịt bò trên lửa lớn với dầu ô liu khoảng 1 phút cho chín tái rồi trút ra đĩa.",
+        "Đảo nhanh cần tây và tỏi tây cắt khúc 2 phút rồi cho thịt bò vào trộn đều."
+      ]
+    },
+    {
+      "id": "vn_sav_006",
+      "slotRole": "main_savory",
+      "region": "north",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Chả lá lốt thịt nạc áp chảo",
+      "prepTimeMinutes": 20,
+      "baseNutrition": {
+        "calories": 185.0,
+        "proteinGrams": 18.0,
+        "carbsGrams": 5.0,
+        "fatGrams": 10.0,
+        "fiberGrams": 2.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_006_1",
+          "name": "Thịt nạc vai",
+          "amount": 85.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_006_2",
+          "name": "Lá lốt",
+          "amount": 25.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_006_3",
+          "name": "Hành tím",
+          "amount": 10.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_006_4",
+          "name": "Dầu ô liu",
+          "amount": 6.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_006_5",
+          "name": "Nước mắm",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Trộn đều thịt nạc vai xay với hành tím băm, nước mắm và tiêu xay.",
+        "Cuốn nhân thịt vào từng lá lốt sạch thành cuộn nhỏ vừa ăn.",
+        "Áp chảo với dầu ô liu trên lửa vừa đến khi lá thơm và nhân chín đều."
+      ]
+    },
+    {
+      "id": "vn_sav_007",
+      "slotRole": "main_savory",
+      "region": "north",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Gà ta rang gừng sả",
+      "prepTimeMinutes": 20,
+      "baseNutrition": {
+        "calories": 190.0,
+        "proteinGrams": 21.0,
+        "carbsGrams": 4.0,
+        "fatGrams": 10.0,
+        "fiberGrams": 1.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_007_1",
+          "name": "Thịt đùi gà bỏ da",
+          "amount": 100.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_007_2",
+          "name": "Gừng tươi",
+          "amount": 15.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_007_3",
+          "name": "Sả tươi",
+          "amount": 15.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_007_4",
+          "name": "Dầu ô liu",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_007_5",
+          "name": "Nước mắm",
           "amount": 8.0,
           "unit": "ml",
           "category": "Gia vị"
         }
       ],
       "steps": [
-        "Thái lát mỏng thịt bò, ướp với chút tỏi băm và dầu hào nhạt.",
-        "Xào nhanh thịt bò trên lửa lớn rồi trút ra đĩa riêng.",
-        "Đảo nhanh cần tây, hành tây 2 phút rồi cho thịt bò vào trộn đều, ăn cùng cơm."
+        "Chặt miếng vừa ăn thịt đùi gà, ướp với gừng thái sợi, sả băm và nước mắm.",
+        "Đảo săn thịt gà trên chảo nóng với dầu ô liu cho dậy mùi thơm.",
+        "Hạ lửa vừa rang khoảng 12 phút đến khi thịt chín vàng, cạn ráo nước."
       ]
     },
     {
-      "id": "vn_dn_001",
-      "mealTypes": [
-        "dinner"
+      "id": "vn_sav_008",
+      "slotRole": "main_savory",
+      "region": "north",
+      "goals": [
+        "maintain",
+        "gainWeight"
       ],
-      "dietTags": [
-        "light",
-        "high_protein"
-      ],
-      "name": "Bún gạo lứt chả cá hấp & rau sống",
-      "prepTimeMinutes": 15,
+      "isVegetarian": false,
+      "name": "Sườn non xào chua ngọt",
+      "prepTimeMinutes": 25,
       "baseNutrition": {
-        "calories": 450.0,
-        "proteinGrams": 30.0,
-        "carbsGrams": 54.0,
-        "fatGrams": 10.0,
-        "fiberGrams": 6.0
+        "calories": 220.0,
+        "proteinGrams": 18.0,
+        "carbsGrams": 12.0,
+        "fatGrams": 11.0,
+        "fiberGrams": 1.0
       },
       "ingredients": [
         {
-          "id": "ing_dn_001_1",
-          "name": "Bún gạo lứt (đã luộc)",
-          "amount": 160.0,
-          "unit": "g",
-          "category": "Tinh bột"
-        },
-        {
-          "id": "ing_dn_001_2",
-          "name": "Chả cá thu hấp",
-          "amount": 130.0,
+          "id": "ing_sav_008_1",
+          "name": "Sườn non heo",
+          "amount": 100.0,
           "unit": "g",
           "category": "Đạm"
         },
         {
-          "id": "ing_dn_001_3",
-          "name": "Rau xà lách & dưa leo",
-          "amount": 150.0,
+          "id": "ing_sav_008_2",
+          "name": "Cà chua",
+          "amount": 40.0,
           "unit": "g",
           "category": "Rau củ"
         },
         {
-          "id": "ing_dn_001_4",
-          "name": "Nước mắm pha loãng",
-          "amount": 20.0,
+          "id": "ing_sav_008_3",
+          "name": "Hành lá",
+          "amount": 10.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_008_4",
+          "name": "Giấm gạo",
+          "amount": 8.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_008_5",
+          "name": "Đường",
+          "amount": 6.0,
+          "unit": "g",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_008_6",
+          "name": "Nước mắm",
+          "amount": 8.0,
           "unit": "ml",
           "category": "Gia vị"
         }
       ],
       "steps": [
-        "Luộc chín bún gạo lứt, xả nước nguội cho tơi sợi.",
-        "Thái miếng chả cá hấp nóng và rửa sạch rau xà lách, dưa leo.",
-        "Trộn đều cùng nước mắm tỏi ớt pha nhạt."
+        "Chần sơ sườn non qua nước sôi rồi áp chảo vàng nhẹ các mặt.",
+        "Pha hỗn hợp nước mắm, giấm gạo, đường cùng cà chua băm nhỏ rồi đổ vào chảo sườn.",
+        "Rim lửa nhỏ khoảng 15 phút đến khi nước sốt sánh bám đều miếng sườn."
       ]
     },
     {
-      "id": "vn_dn_002",
-      "mealTypes": [
-        "dinner"
+      "id": "vn_sav_009",
+      "slotRole": "main_savory",
+      "region": "north",
+      "goals": [
+        "maintain",
+        "gainWeight"
       ],
-      "dietTags": [
-        "low_fat",
-        "high_protein"
-      ],
-      "name": "Tôm hấp sả, bí đỏ luộc & cơm gạo lứt",
-      "prepTimeMinutes": 18,
-      "baseNutrition": {
-        "calories": 440.0,
-        "proteinGrams": 32.0,
-        "carbsGrams": 55.0,
-        "fatGrams": 7.0,
-        "fiberGrams": 6.0
-      },
-      "ingredients": [
-        {
-          "id": "ing_dn_002_1",
-          "name": "Gạo lứt (nấu chín)",
-          "amount": 140.0,
-          "unit": "g",
-          "category": "Tinh bột"
-        },
-        {
-          "id": "ing_dn_002_2",
-          "name": "Tôm tươi",
-          "amount": 160.0,
-          "unit": "g",
-          "category": "Đạm"
-        },
-        {
-          "id": "ing_dn_002_3",
-          "name": "Bí đỏ",
-          "amount": 150.0,
-          "unit": "g",
-          "category": "Rau củ"
-        },
-        {
-          "id": "ing_dn_002_4",
-          "name": "Sả & muối tiêu chanh",
-          "amount": 15.0,
-          "unit": "g",
-          "category": "Gia vị"
-        }
-      ],
-      "steps": [
-        "Rửa sạch tôm, xếp lên xửng cùng sả đập dập và hấp 6 phút.",
-        "Luộc chín bí đỏ cắt miếng vừa ăn.",
-        "Dùng nóng với cơm gạo lứt và chấm muối tiêu chanh."
-      ]
-    },
-    {
-      "id": "vn_dn_003",
-      "mealTypes": [
-        "dinner"
-      ],
-      "dietTags": [
-        "light",
-        "easy_cook"
-      ],
-      "name": "Đậu hũ non sốt cà chua trứng & canh rau ngót",
+      "isVegetarian": false,
+      "name": "Trứng đúc thịt nạc hành lá",
       "prepTimeMinutes": 15,
       "baseNutrition": {
-        "calories": 430.0,
-        "proteinGrams": 24.0,
-        "carbsGrams": 48.0,
-        "fatGrams": 15.0,
-        "fiberGrams": 6.0
+        "calories": 175.0,
+        "proteinGrams": 16.0,
+        "carbsGrams": 3.0,
+        "fatGrams": 11.0,
+        "fiberGrams": 0.5
       },
       "ingredients": [
         {
-          "id": "ing_dn_003_1",
-          "name": "Cơm trắng",
-          "amount": 130.0,
-          "unit": "g",
-          "category": "Tinh bột"
-        },
-        {
-          "id": "ing_dn_003_2",
-          "name": "Đậu hũ non",
-          "amount": 180.0,
-          "unit": "g",
-          "category": "Đạm"
-        },
-        {
-          "id": "ing_dn_003_3",
+          "id": "ing_sav_009_1",
           "name": "Trứng gà",
           "amount": 1.0,
           "unit": "quả",
           "category": "Đạm"
         },
         {
-          "id": "ing_dn_003_4",
-          "name": "Cà chua & rau ngót",
-          "amount": 200.0,
+          "id": "ing_sav_009_2",
+          "name": "Thịt nạc vai",
+          "amount": 45.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_009_3",
+          "name": "Hành lá",
+          "amount": 15.0,
           "unit": "g",
           "category": "Rau củ"
         },
         {
-          "id": "ing_dn_003_5",
+          "id": "ing_sav_009_4",
+          "name": "Dầu ô liu",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_009_5",
+          "name": "Nước mắm",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Đánh tan trứng gà với thịt nạc vai xay, hành lá thái nhỏ và chút nước mắm.",
+        "Làm nóng chảo chống dính với dầu ô liu rồi đổ hỗn hợp trứng thịt vào dàn đều.",
+        "Đậy vung đun lửa nhỏ đến khi mặt dưới chín vàng, lật mặt chiên thêm 2 phút."
+      ]
+    },
+    {
+      "id": "vn_sav_010",
+      "slotRole": "main_savory",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Mực tươi xào dứa cần tây",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 130.0,
+        "proteinGrams": 18.0,
+        "carbsGrams": 8.0,
+        "fatGrams": 3.0,
+        "fiberGrams": 2.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_010_1",
+          "name": "Mực ống tươi",
+          "amount": 100.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_010_2",
+          "name": "Dứa tươi",
+          "amount": 50.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_010_3",
+          "name": "Cần tây",
+          "amount": 45.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_010_4",
+          "name": "Dầu ô liu",
+          "amount": 3.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Làm sạch mực ống, khứa vảy rồng và chần nhanh qua nước sôi có gừng.",
+        "Xào dứa thái miếng với dầu ô liu trong 2 phút cho dậy hương thơm.",
+        "Cho mực và cần tây cắt khúc vào đảo nhanh lửa lớn 2 phút rồi tắt bếp."
+      ]
+    },
+    {
+      "id": "vn_sav_011",
+      "slotRole": "main_savory",
+      "region": "north",
+      "goals": [
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Thịt ba chỉ rang cháy cạnh hành lá",
+      "prepTimeMinutes": 18,
+      "baseNutrition": {
+        "calories": 235.0,
+        "proteinGrams": 15.0,
+        "carbsGrams": 5.0,
+        "fatGrams": 17.0,
+        "fiberGrams": 0.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_011_1",
+          "name": "Thịt ba chỉ heo",
+          "amount": 90.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_011_2",
+          "name": "Hành lá",
+          "amount": 15.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_011_3",
+          "name": "Hành tím",
+          "amount": 10.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_011_4",
+          "name": "Nước mắm",
+          "amount": 8.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_011_5",
+          "name": "Đường",
+          "amount": 3.0,
+          "unit": "g",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Thái lát mỏng thịt ba chỉ, cho vào chảo nóng đảo đều cho ra bớt mỡ và xém cạnh.",
+        "Chắt bớt mỡ thừa, thêm hành tím băm, nước mắm và chút đường đảo săn.",
+        "Rắc hành lá cắt khúc và tiêu xay, đảo đều rồi bày ra đĩa."
+      ]
+    },
+    {
+      "id": "vn_sav_012",
+      "slotRole": "main_savory",
+      "region": "north",
+      "goals": [
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Cá hồi áp chảo sốt tỏi chanh",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 230.0,
+        "proteinGrams": 21.0,
+        "carbsGrams": 2.0,
+        "fatGrams": 15.0,
+        "fiberGrams": 0.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_012_1",
+          "name": "Phi lê cá hồi",
+          "amount": 100.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_012_2",
+          "name": "Tỏi tươi",
+          "amount": 5.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_012_3",
+          "name": "Nước cốt chanh",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_012_4",
+          "name": "Dầu ô liu",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Thấm khô phi lê cá hồi, rắc nhẹ chút muối tinh và tiêu đen lên hai mặt.",
+        "Áp chảo mặt da trước với dầu ô liu 3 phút, lật mặt áp chảo thêm 2 phút.",
+        "Phi thơm tỏi với nước cốt chanh rồi rưới nhẹ lên cá hồi trước khi dùng."
+      ]
+    },
+    {
+      "id": "vn_sav_013",
+      "slotRole": "main_savory",
+      "region": "central",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Cá thu kho tiêu tộ nhạt",
+      "prepTimeMinutes": 20,
+      "baseNutrition": {
+        "calories": 160.0,
+        "proteinGrams": 23.0,
+        "carbsGrams": 3.0,
+        "fatGrams": 6.0,
+        "fiberGrams": 0.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_013_1",
+          "name": "Cá thu cắt lát",
+          "amount": 100.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_013_2",
+          "name": "Hành tím",
+          "amount": 10.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_013_3",
+          "name": "Nước mắm",
+          "amount": 8.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_013_4",
+          "name": "Nước lọc",
+          "amount": 80.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Rửa sạch lát cá thu, áp chảo sơ hai mặt không dầu cho thịt cá săn chắc.",
+        "Cho cá vào nồi đất cùng hành tím đập dập, nước mắm, tiêu và nước lọc.",
+        "Kho nhỏ lửa khoảng 15 phút cho nước kho rút còn xâm xấp và thơm mùi tiêu."
+      ]
+    },
+    {
+      "id": "vn_sav_014",
+      "slotRole": "main_savory",
+      "region": "central",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Tôm đất rim mặn ngọt ít dầu",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 140.0,
+        "proteinGrams": 20.0,
+        "carbsGrams": 6.0,
+        "fatGrams": 4.0,
+        "fiberGrams": 0.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_014_1",
+          "name": "Tôm tươi",
+          "amount": 100.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_014_2",
+          "name": "Hành lá",
+          "amount": 10.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_014_3",
+          "name": "Nước mắm",
+          "amount": 6.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_014_4",
+          "name": "Đường",
+          "amount": 4.0,
+          "unit": "g",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_014_5",
+          "name": "Dầu ô liu",
+          "amount": 3.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Cắt bỏ đầu nhọn và chỉ lưng tôm, rửa sạch rồi để ráo nước.",
+        "Đảo tôm trên chảo với dầu ô liu đến khi vỏ chuyển màu đỏ đẹp.",
+        "Thêm nước mắm và đường rim lửa nhỏ 5 phút cho keo nhẹ, rắc hành lá."
+      ]
+    },
+    {
+      "id": "vn_sav_015",
+      "slotRole": "main_savory",
+      "region": "central",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Mực ống hấp gừng hành lá",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 115.0,
+        "proteinGrams": 21.0,
+        "carbsGrams": 3.0,
+        "fatGrams": 2.0,
+        "fiberGrams": 0.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_015_1",
+          "name": "Mực ống tươi",
+          "amount": 120.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_015_2",
+          "name": "Gừng tươi",
+          "amount": 15.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_015_3",
+          "name": "Hành lá",
+          "amount": 20.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_015_4",
+          "name": "Nước mắm",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Làm sạch mực ống, để nguyên con hoặc cắt khoanh vừa ăn.",
+        "Xếp mực lên đĩa cùng gừng thái sợi và đầu hành lá rồi cho vào xửng hấp.",
+        "Hấp cách thủy khoảng 6 phút cho mực vừa chín giòn, dùng kèm nước mắm gừng."
+      ]
+    },
+    {
+      "id": "vn_sav_016",
+      "slotRole": "main_savory",
+      "region": "central",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Thịt bò xào khổ qua tỏi",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 155.0,
+        "proteinGrams": 19.0,
+        "carbsGrams": 6.0,
+        "fatGrams": 6.0,
+        "fiberGrams": 2.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_016_1",
+          "name": "Thịt thăn bò",
+          "amount": 80.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_016_2",
+          "name": "Khổ qua",
+          "amount": 90.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_016_3",
+          "name": "Tỏi tươi",
+          "amount": 5.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_016_4",
+          "name": "Dầu ô liu",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_016_5",
+          "name": "Nước tương",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Bỏ ruột khổ qua, thái lát mỏng rồi ngâm nước mát cho giảm vị đắng.",
+        "Xào nhanh thịt thăn bò ướp nước tương trên lửa lớn rồi trút ra đĩa.",
+        "Xào tỏi và khổ qua 2 phút cho vừa giòn rồi cho thịt bò vào đảo đều."
+      ]
+    },
+    {
+      "id": "vn_sav_017",
+      "slotRole": "main_savory",
+      "region": "central",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Cá nục hấp gừng hành",
+      "prepTimeMinutes": 18,
+      "baseNutrition": {
+        "calories": 140.0,
+        "proteinGrams": 22.0,
+        "carbsGrams": 2.0,
+        "fatGrams": 5.0,
+        "fiberGrams": 0.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_017_1",
+          "name": "Cá nục tươi",
+          "amount": 110.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_017_2",
+          "name": "Gừng tươi",
+          "amount": 12.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_017_3",
+          "name": "Hành lá",
+          "amount": 15.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_017_4",
+          "name": "Nước mắm",
+          "amount": 6.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Làm sạch cá nục, khứa nhẹ thân cá và ướp chút nước mắm với gừng băm.",
+        "Đặt cá lên đĩa sâu lòng, rải hành lá cắt khúc và gừng thái sợi lên trên.",
+        "Hấp cách thủy khoảng 12 phút đến khi cá chín thơm và ngọt thịt."
+      ]
+    },
+    {
+      "id": "vn_sav_018",
+      "slotRole": "main_savory",
+      "region": "central",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Gà kho sả ớt miền Trung",
+      "prepTimeMinutes": 22,
+      "baseNutrition": {
+        "calories": 185.0,
+        "proteinGrams": 21.0,
+        "carbsGrams": 5.0,
+        "fatGrams": 9.0,
+        "fiberGrams": 1.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_018_1",
+          "name": "Thịt đùi gà bỏ da",
+          "amount": 100.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_018_2",
+          "name": "Sả tươi",
+          "amount": 20.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_018_3",
+          "name": "Hành tím",
+          "amount": 10.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_018_4",
+          "name": "Dầu ô liu",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_018_5",
+          "name": "Nước mắm",
+          "amount": 8.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Chặt thịt gà miếng nhỏ, ướp sả băm, nghệ tươi, nước mắm và chút ớt trong 15 phút.",
+        "Phi thơm hành tím với dầu ô liu rồi cho gà vào đảo săn mặt.",
+        "Thêm ít nước lọc kho nhỏ lửa 15 phút đến khi nước sệt thơm mùi sả."
+      ]
+    },
+    {
+      "id": "vn_sav_019",
+      "slotRole": "main_savory",
+      "region": "central",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Cá bống kho tiêu xanh",
+      "prepTimeMinutes": 20,
+      "baseNutrition": {
+        "calories": 170.0,
+        "proteinGrams": 20.0,
+        "carbsGrams": 6.0,
+        "fatGrams": 7.0,
+        "fiberGrams": 0.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_019_1",
+          "name": "Cá bống tươi",
+          "amount": 105.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_019_2",
+          "name": "Tiêu xanh",
+          "amount": 8.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_019_3",
+          "name": "Nước mắm",
+          "amount": 8.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_019_4",
+          "name": "Đường",
+          "amount": 4.0,
+          "unit": "g",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_019_5",
+          "name": "Dầu ô liu",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Làm sạch cá bống, ướp với nước mắm, đường và tiêu xanh đập dập 15 phút.",
+        "Đặt nồi lên bếp với chút dầu ô liu, kho cá trên lửa nhỏ không đảo mạnh tay.",
+        "Đun khoảng 15 phút đến khi cá săn chắc và nước kho sánh bóng."
+      ]
+    },
+    {
+      "id": "vn_sav_020",
+      "slotRole": "main_savory",
+      "region": "central",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Thịt nạc vai rim sả ớt",
+      "prepTimeMinutes": 18,
+      "baseNutrition": {
+        "calories": 185.0,
+        "proteinGrams": 19.0,
+        "carbsGrams": 5.0,
+        "fatGrams": 10.0,
+        "fiberGrams": 1.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_020_1",
+          "name": "Thịt nạc vai",
+          "amount": 90.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_020_2",
+          "name": "Sả tươi",
+          "amount": 20.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_020_3",
+          "name": "Tỏi tươi",
+          "amount": 5.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_020_4",
+          "name": "Dầu ô liu",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_020_5",
+          "name": "Nước mắm",
+          "amount": 7.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Thái mỏng thịt nạc vai và ướp với nước mắm cùng một phần sả băm.",
+        "Phi thơm tỏi và sả còn lại với dầu ô liu rồi cho thịt vào đảo đều.",
+        "Rim lửa nhỏ khoảng 10 phút cho thịt chín mềm và quyện hương sả."
+      ]
+    },
+    {
+      "id": "vn_sav_021",
+      "slotRole": "main_savory",
+      "region": "central",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Tôm xào đậu cô ve tỏi",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 135.0,
+        "proteinGrams": 17.0,
+        "carbsGrams": 7.0,
+        "fatGrams": 4.0,
+        "fiberGrams": 3.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_021_1",
+          "name": "Tôm tươi",
+          "amount": 80.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_021_2",
+          "name": "Đậu cô ve",
+          "amount": 90.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_021_3",
+          "name": "Tỏi tươi",
+          "amount": 5.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_021_4",
+          "name": "Dầu ô liu",
+          "amount": 3.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Tước xơ đậu cô ve, cắt khúc vát chéo rồi chần qua nước sôi 1 phút.",
+        "Phi thơm tỏi với dầu ô liu, xào nhanh tôm tươi bóc vỏ cho săn đỏ.",
+        "Cho đậu cô ve vào đảo chung 2 phút, nêm nhạt và tắt bếp."
+      ]
+    },
+    {
+      "id": "vn_sav_022",
+      "slotRole": "main_savory",
+      "region": "central",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Chả cá thu sốt cà chua thì là",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 175.0,
+        "proteinGrams": 19.0,
+        "carbsGrams": 7.0,
+        "fatGrams": 8.0,
+        "fiberGrams": 1.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_022_1",
+          "name": "Chả cá thu hấp",
+          "amount": 90.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_022_2",
+          "name": "Cà chua",
+          "amount": 80.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_022_3",
+          "name": "Rau thì là",
+          "amount": 10.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_022_4",
+          "name": "Dầu ô liu",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_022_5",
+          "name": "Nước mắm",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Thái miếng vừa ăn chả cá thu hấp và băm nhỏ cà chua chín.",
+        "Xào nhuyễn cà chua với dầu ô liu, nêm chút nước mắm tạo nước sốt sánh.",
+        "Thả chả cá vào đảo nhẹ 5 phút cho thấm vị, rắc thì là cắt khúc."
+      ]
+    },
+    {
+      "id": "vn_sav_023",
+      "slotRole": "main_savory",
+      "region": "central",
+      "goals": [
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Thịt heo kho củ cải trắng",
+      "prepTimeMinutes": 25,
+      "baseNutrition": {
+        "calories": 230.0,
+        "proteinGrams": 16.0,
+        "carbsGrams": 10.0,
+        "fatGrams": 14.0,
+        "fiberGrams": 2.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_023_1",
+          "name": "Thịt ba chỉ heo",
+          "amount": 85.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_023_2",
+          "name": "Củ cải trắng",
+          "amount": 90.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_023_3",
+          "name": "Nước mắm",
+          "amount": 8.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_023_4",
+          "name": "Đường",
+          "amount": 4.0,
+          "unit": "g",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_023_5",
+          "name": "Nước lọc",
+          "amount": 100.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Cắt miếng vuông thịt ba chỉ, ướp nước mắm và đường trong 15 phút.",
+        "Đảo săn thịt trong nồi, thêm nước lọc và củ cải trắng cắt khối vào kho.",
+        "Đun lửa nhỏ 20 phút đến khi thịt mềm và củ cải thấm đẫm gia vị."
+      ]
+    },
+    {
+      "id": "vn_sav_024",
+      "slotRole": "main_savory",
+      "region": "central",
+      "goals": [
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Cá ngừ kho thơm đậm vị",
+      "prepTimeMinutes": 25,
+      "baseNutrition": {
+        "calories": 220.0,
+        "proteinGrams": 23.0,
+        "carbsGrams": 9.0,
+        "fatGrams": 10.0,
+        "fiberGrams": 1.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_024_1",
+          "name": "Cá ngừ cắt lát",
+          "amount": 105.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_024_2",
+          "name": "Dứa tươi",
+          "amount": 60.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_024_3",
+          "name": "Dầu ô liu",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_024_4",
+          "name": "Nước mắm",
+          "amount": 8.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_024_5",
+          "name": "Nước lọc",
+          "amount": 100.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Áp chảo sơ lát cá ngừ với dầu ô liu cho hai mặt săn vàng nhẹ.",
+        "Xếp dứa tươi thái miếng xuống đáy nồi, đặt cá ngừ lên cùng nước mắm và nước lọc.",
+        "Kho nhỏ lửa khoảng 18 phút đến khi nước sánh và cá thơm vị chua ngọt."
+      ]
+    },
+    {
+      "id": "vn_sav_025",
+      "slotRole": "main_savory",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Cá lóc kho tộ ít đường",
+      "prepTimeMinutes": 20,
+      "baseNutrition": {
+        "calories": 155.0,
+        "proteinGrams": 22.0,
+        "carbsGrams": 5.0,
+        "fatGrams": 5.0,
+        "fiberGrams": 0.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_025_1",
+          "name": "Phi lê cá lóc",
+          "amount": 110.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_025_2",
+          "name": "Hành lá",
+          "amount": 15.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_025_3",
+          "name": "Nước mắm",
+          "amount": 8.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_025_4",
+          "name": "Đường",
+          "amount": 3.0,
+          "unit": "g",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_025_5",
+          "name": "Dầu ô liu",
+          "amount": 3.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Ướp cá lóc cắt khúc với nước mắm, chút đường và tiêu trong 15 phút.",
+        "Đun nóng nồi đất với dầu ô liu rồi cho cá cùng ít nước lọc vào kho lửa nhỏ.",
+        "Kho khoảng 15 phút đến khi nước rút sánh lại, rắc hành lá và tiêu xay."
+      ]
+    },
+    {
+      "id": "vn_sav_026",
+      "slotRole": "main_savory",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Tôm sú hấp sả chấm muối tiêu chanh",
+      "prepTimeMinutes": 12,
+      "baseNutrition": {
+        "calories": 115.0,
+        "proteinGrams": 22.0,
+        "carbsGrams": 2.0,
+        "fatGrams": 2.0,
+        "fiberGrams": 0.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_026_1",
+          "name": "Tôm tươi",
+          "amount": 115.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_026_2",
+          "name": "Sả tươi",
+          "amount": 20.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_026_3",
+          "name": "Nước cốt chanh",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Rửa sạch tôm tươi, cắt bỏ phần râu cứng rồi để ráo.",
+        "Đập dập sả tươi lót dưới xửng, xếp tôm lên trên và hấp cách thủy 5 phút.",
+        "Bày tôm chín đỏ ra đĩa, chấm cùng muối tiêu pha nước cốt chanh."
+      ]
+    },
+    {
+      "id": "vn_sav_027",
+      "slotRole": "main_savory",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Ức gà xào bông cải xanh",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 155.0,
+        "proteinGrams": 23.0,
+        "carbsGrams": 7.0,
+        "fatGrams": 4.0,
+        "fiberGrams": 3.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_027_1",
+          "name": "Ức gà phi lê",
+          "amount": 90.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_027_2",
+          "name": "Bông cải xanh",
+          "amount": 90.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_027_3",
+          "name": "Tỏi tươi",
+          "amount": 5.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_027_4",
+          "name": "Dầu ô liu",
+          "amount": 3.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_027_5",
+          "name": "Nước tương",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Tách bông cải xanh thành miếng vừa ăn và chần qua nước sôi 1 phút.",
+        "Xào nhanh ức gà thái lát với tỏi và dầu ô liu đến khi chín đều.",
+        "Cho bông cải xanh và chút nước tương vào đảo chung 2 phút rồi tắt bếp."
+      ]
+    },
+    {
+      "id": "vn_sav_028",
+      "slotRole": "main_savory",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Khổ qua dồn thịt nạc hấp",
+      "prepTimeMinutes": 22,
+      "baseNutrition": {
+        "calories": 140.0,
+        "proteinGrams": 17.0,
+        "carbsGrams": 6.0,
+        "fatGrams": 5.0,
+        "fiberGrams": 2.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_028_1",
+          "name": "Thịt nạc vai",
+          "amount": 75.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_028_2",
+          "name": "Khổ qua",
+          "amount": 90.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_028_3",
+          "name": "Nấm mèo",
+          "amount": 10.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_028_4",
+          "name": "Hành lá",
+          "amount": 10.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_028_5",
+          "name": "Nước mắm",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Cắt khúc khổ qua, moi sạch ruột rồi rửa qua nước muối loãng.",
+        "Trộn thịt nạc vai xay với nấm mèo băm nhỏ, hành lá, tiêu và nước mắm rồi dồn vào khổ qua.",
+        "Hấp cách thủy khoảng 18 phút đến khi khổ qua mềm và nhân thịt chín ngọt."
+      ]
+    },
+    {
+      "id": "vn_sav_029",
+      "slotRole": "main_savory",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Cá điêu hồng hấp gừng hành",
+      "prepTimeMinutes": 18,
+      "baseNutrition": {
+        "calories": 130.0,
+        "proteinGrams": 22.0,
+        "carbsGrams": 2.0,
+        "fatGrams": 4.0,
+        "fiberGrams": 0.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_029_1",
+          "name": "Phi lê cá điêu hồng",
+          "amount": 115.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_029_2",
+          "name": "Gừng tươi",
+          "amount": 15.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_029_3",
+          "name": "Hành lá",
+          "amount": 20.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_029_4",
+          "name": "Nước tương",
+          "amount": 6.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Làm sạch phi lê cá điêu hồng, xếp lên đĩa cùng gừng thái chỉ.",
+        "Rưới nhẹ nước tương lên cá và hấp cách thủy khoảng 10 phút cho chín tới.",
+        "Rải hành lá chẻ sợi lên mặt đĩa, đậy nắp thêm 1 phút rồi dùng nóng."
+      ]
+    },
+    {
+      "id": "vn_sav_030",
+      "slotRole": "main_savory",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Thịt bò xào bông thiên lý",
+      "prepTimeMinutes": 12,
+      "baseNutrition": {
+        "calories": 155.0,
+        "proteinGrams": 19.0,
+        "carbsGrams": 6.0,
+        "fatGrams": 6.0,
+        "fiberGrams": 2.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_030_1",
+          "name": "Thịt thăn bò",
+          "amount": 80.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_030_2",
+          "name": "Bông thiên lý",
+          "amount": 90.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_030_3",
+          "name": "Tỏi tươi",
+          "amount": 5.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_030_4",
+          "name": "Dầu ô liu",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_030_5",
+          "name": "Nước tương",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Nhặt rửa sạch bông thiên lý rồi để ráo, thái mỏng thịt thăn bò ướp nước tương.",
+        "Xào nhanh thịt bò trên lửa lớn với tỏi và dầu ô liu trong 1 phút rồi vớt ra.",
+        "Đảo bông thiên lý 2 phút cho chín xanh rồi trút thịt bò vào trộn đều."
+      ]
+    },
+    {
+      "id": "vn_sav_031",
+      "slotRole": "main_savory",
+      "region": "south",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Tôm thịt ram tiêu hành",
+      "prepTimeMinutes": 18,
+      "baseNutrition": {
+        "calories": 190.0,
+        "proteinGrams": 21.0,
+        "carbsGrams": 6.0,
+        "fatGrams": 9.0,
+        "fiberGrams": 0.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_031_1",
+          "name": "Tôm tươi",
+          "amount": 60.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_031_2",
+          "name": "Thịt nạc vai",
+          "amount": 55.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_031_3",
+          "name": "Hành lá",
+          "amount": 15.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_031_4",
+          "name": "Nước mắm",
+          "amount": 8.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_031_5",
+          "name": "Đường",
+          "amount": 4.0,
+          "unit": "g",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Thái lát vừa ăn thịt nạc vai, đảo săn trên chảo cho ra chút mỡ tự nhiên.",
+        "Cho tôm tươi đã làm sạch vào đảo chung với nước mắm và đường.",
+        "Ram lửa nhỏ 8 phút đến khi nước cạn sánh, rắc hành lá và tiêu xay."
+      ]
+    },
+    {
+      "id": "vn_sav_032",
+      "slotRole": "main_savory",
+      "region": "south",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Cá basa kho tộ tiêu xanh",
+      "prepTimeMinutes": 20,
+      "baseNutrition": {
+        "calories": 200.0,
+        "proteinGrams": 20.0,
+        "carbsGrams": 5.0,
+        "fatGrams": 11.0,
+        "fiberGrams": 0.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_032_1",
+          "name": "Cá basa cắt khúc",
+          "amount": 110.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_032_2",
+          "name": "Tiêu xanh",
+          "amount": 8.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_032_3",
+          "name": "Hành lá",
+          "amount": 15.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_032_4",
+          "name": "Nước mắm",
+          "amount": 8.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_032_5",
+          "name": "Đường",
+          "amount": 4.0,
+          "unit": "g",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Rửa sạch khúc cá basa với nước muối chanh, ướp nước mắm và đường 15 phút.",
+        "Cho cá vào nồi đất cùng tiêu xanh và ít nước lọc, đun sôi rồi hạ lửa nhỏ.",
+        "Kho 15 phút đến khi nước sánh kẹo, rắc hành lá trước khi tắt bếp."
+      ]
+    },
+    {
+      "id": "vn_sav_033",
+      "slotRole": "main_savory",
+      "region": "south",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Trứng chiên thịt bằm hành tây",
+      "prepTimeMinutes": 12,
+      "baseNutrition": {
+        "calories": 185.0,
+        "proteinGrams": 16.0,
+        "carbsGrams": 5.0,
+        "fatGrams": 11.0,
+        "fiberGrams": 1.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_033_1",
+          "name": "Trứng gà",
+          "amount": 1.0,
+          "unit": "quả",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_033_2",
+          "name": "Thịt nạc vai",
+          "amount": 45.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_033_3",
+          "name": "Hành tây",
+          "amount": 35.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_033_4",
+          "name": "Dầu ô liu",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_033_5",
+          "name": "Nước mắm",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Xào nhanh hành tây thái hạt lựu và thịt nạc vai bằm với chút dầu ô liu.",
+        "Đánh tan trứng gà với nước mắm rồi đổ đều vào chảo thịt hành.",
+        "Chiên lửa vừa đến khi hai mặt vàng thơm rồi cắt miếng vừa ăn."
+      ]
+    },
+    {
+      "id": "vn_sav_034",
+      "slotRole": "main_savory",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": false,
+      "name": "Mực xào bông cải cà rốt",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 135.0,
+        "proteinGrams": 18.0,
+        "carbsGrams": 7.0,
+        "fatGrams": 4.0,
+        "fiberGrams": 2.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_034_1",
+          "name": "Mực ống tươi",
+          "amount": 95.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_034_2",
+          "name": "Bông cải xanh",
+          "amount": 60.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_034_3",
+          "name": "Cà rốt",
+          "amount": 35.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_sav_034_4",
+          "name": "Dầu ô liu",
+          "amount": 3.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Chần nhanh bông cải xanh và cà rốt tỉa lát qua nước sôi để giữ màu xanh giòn.",
+        "Xào săn mực ống cắt miếng trên lửa lớn với dầu ô liu và chút tỏi băm.",
+        "Cho rau củ vào đảo đều 2 phút, nêm nhạt và rắc tiêu xay."
+      ]
+    },
+    {
+      "id": "vn_sav_035",
+      "slotRole": "main_savory",
+      "region": "south",
+      "goals": [
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Thịt kho tàu trứng nước dừa",
+      "prepTimeMinutes": 30,
+      "baseNutrition": {
+        "calories": 240.0,
+        "proteinGrams": 17.0,
+        "carbsGrams": 7.0,
+        "fatGrams": 16.0,
+        "fiberGrams": 0.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_035_1",
+          "name": "Thịt ba chỉ heo",
+          "amount": 75.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_035_2",
+          "name": "Trứng vịt",
+          "amount": 1.0,
+          "unit": "quả",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_035_3",
+          "name": "Nước dừa tươi",
+          "amount": 100.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_035_4",
+          "name": "Nước mắm",
+          "amount": 8.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Luộc chín bóc vỏ trứng vịt, cắt khối thịt ba chỉ ướp nước mắm và tỏi băm.",
+        "Đảo săn thịt trong nồi rồi đổ nước dừa tươi ngập mặt, đun sôi hớt bọt.",
+        "Thả trứng vào kho liu riu khoảng 25 phút đến khi thịt mềm và nước lên màu hổ phách."
+      ]
+    },
+    {
+      "id": "vn_sav_036",
+      "slotRole": "main_savory",
+      "region": "south",
+      "goals": [
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Sườn non ram mặn ngọt nước dừa",
+      "prepTimeMinutes": 25,
+      "baseNutrition": {
+        "calories": 235.0,
+        "proteinGrams": 18.0,
+        "carbsGrams": 9.0,
+        "fatGrams": 14.0,
+        "fiberGrams": 0.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_sav_036_1",
+          "name": "Sườn non heo",
+          "amount": 105.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_sav_036_2",
+          "name": "Nước dừa tươi",
+          "amount": 100.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_036_3",
+          "name": "Nước mắm",
+          "amount": 8.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_sav_036_4",
+          "name": "Hành lá",
+          "amount": 10.0,
+          "unit": "g",
+          "category": "Rau củ"
+        }
+      ],
+      "steps": [
+        "Chặt miếng vừa ăn sườn non, chần qua nước sôi rồi ướp nước mắm và hành tỏi.",
+        "Đảo vàng nhẹ sườn trên chảo rồi đổ nước dừa tươi vào đun nhỏ lửa.",
+        "Ram khoảng 20 phút đến khi nước dừa cạn sánh bóng bám quanh sườn, rắc hành lá."
+      ]
+    },
+    {
+      "id": "vn_soup_001",
+      "slotRole": "soup",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Canh cua đồng rau mồng tơi mướp hương",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 80.0,
+        "proteinGrams": 9.0,
+        "carbsGrams": 6.0,
+        "fatGrams": 2.0,
+        "fiberGrams": 2.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_soup_001_1",
+          "name": "Thịt cua đồng xay",
+          "amount": 45.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_soup_001_2",
+          "name": "Rau mồng tơi",
+          "amount": 60.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_001_3",
+          "name": "Mướp hương",
+          "amount": 50.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_001_4",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Hòa thịt cua đồng xay với nước lọc rồi lọc bỏ bã qua rây mịn.",
+        "Đun lửa vừa đến khi riêu cua kết mảng nổi lên thì nhẹ tay gạt sang một bên.",
+        "Thả rau mồng tơi thái nhỏ và mướp hương cắt miếng vào nấu sôi 2 phút, nêm nhạt."
+      ]
+    },
+    {
+      "id": "vn_soup_002",
+      "slotRole": "soup",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Canh chua sấu thịt nạc bằm",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 85.0,
+        "proteinGrams": 8.0,
+        "carbsGrams": 6.0,
+        "fatGrams": 3.0,
+        "fiberGrams": 1.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_soup_002_1",
+          "name": "Thịt nạc vai",
+          "amount": 35.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_soup_002_2",
+          "name": "Quả sấu tươi",
+          "amount": 2.0,
+          "unit": "quả",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_002_3",
+          "name": "Cà chua",
+          "amount": 40.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_002_4",
+          "name": "Hành lá",
+          "amount": 10.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_002_5",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Xào sơ thịt nạc vai bằm và cà chua bổ múi cau trong nồi với chút nước mắm.",
+        "Đổ nước lọc và thả sấu tươi đã cạo vỏ vào đun sôi khoảng 8 phút cho sấu chín mềm.",
+        "Dầm nhẹ quả sấu tạo vị chua thanh, nêm vừa ăn rồi rắc hành lá."
+      ]
+    },
+    {
+      "id": "vn_soup_003",
+      "slotRole": "soup",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Canh cải bẹ xanh gừng tươi",
+      "prepTimeMinutes": 10,
+      "baseNutrition": {
+        "calories": 45.0,
+        "proteinGrams": 3.0,
+        "carbsGrams": 6.0,
+        "fatGrams": 1.0,
+        "fiberGrams": 3.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_soup_003_1",
+          "name": "Cải bẹ xanh",
+          "amount": 100.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_003_2",
+          "name": "Gừng tươi",
+          "amount": 8.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_003_3",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_soup_003_4",
+          "name": "Dầu ô liu",
+          "amount": 1.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Rửa sạch cải bẹ xanh cắt khúc vừa ăn và đập dập gừng tươi.",
+        "Đun sôi nước lọc cùng gừng và chút dầu ô liu cho thơm ấm.",
+        "Cho cải bẹ xanh vào nấu chín tới khoảng 3 phút, nêm nhạt rồi tắt bếp."
+      ]
+    },
+    {
+      "id": "vn_soup_004",
+      "slotRole": "soup",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Canh rau ngót thịt nạc bằm",
+      "prepTimeMinutes": 12,
+      "baseNutrition": {
+        "calories": 85.0,
+        "proteinGrams": 9.0,
+        "carbsGrams": 5.0,
+        "fatGrams": 3.0,
+        "fiberGrams": 2.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_soup_004_1",
+          "name": "Rau ngót",
+          "amount": 75.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_004_2",
+          "name": "Thịt nạc vai",
+          "amount": 35.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_soup_004_3",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_soup_004_4",
+          "name": "Nước mắm",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Tuốt lá rau ngót, rửa sạch rồi vò nhẹ cho lá mềm và ngọt nước khi nấu.",
+        "Đảo săn thịt nạc vai bằm với chút nước mắm rồi đổ nước lọc vào đun sôi.",
+        "Cho rau ngót vào nấu khoảng 4 phút đến khi rau chín mềm thì tắt bếp."
+      ]
+    },
+    {
+      "id": "vn_soup_005",
+      "slotRole": "soup",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Canh bí đao nấu tôm khô",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 65.0,
+        "proteinGrams": 7.0,
+        "carbsGrams": 7.0,
+        "fatGrams": 1.0,
+        "fiberGrams": 2.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_soup_005_1",
+          "name": "Bí đao",
+          "amount": 110.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_005_2",
+          "name": "Tôm khô",
+          "amount": 12.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_soup_005_3",
+          "name": "Hành lá",
+          "amount": 10.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_005_4",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Ngâm tôm khô nước ấm 10 phút cho mềm rồi giã dập nhẹ.",
+        "Đun sôi nước lọc cùng tôm khô khoảng 5 phút để lấy vị ngọt tự nhiên.",
+        "Thả bí đao thái miếng vào nấu chín trong 5 phút, nêm nhạt và rắc hành lá."
+      ]
+    },
+    {
+      "id": "vn_soup_006",
+      "slotRole": "soup",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Canh măng tươi nấm hương chay",
+      "prepTimeMinutes": 18,
+      "baseNutrition": {
+        "calories": 60.0,
+        "proteinGrams": 4.0,
+        "carbsGrams": 7.0,
+        "fatGrams": 1.5,
+        "fiberGrams": 3.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_soup_006_1",
+          "name": "Măng tươi đã luộc",
+          "amount": 80.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_006_2",
+          "name": "Nấm hương tươi",
+          "amount": 45.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_006_3",
+          "name": "Hành lá",
+          "amount": 10.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_006_4",
+          "name": "Dầu ô liu",
+          "amount": 1.5,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_soup_006_5",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Xé sợi vừa ăn măng tươi đã luộc kỹ và rửa sạch nấm hương cắt đôi.",
+        "Xào sơ măng cùng nấm hương với dầu ô liu và chút muối nhạt.",
+        "Thêm nước lọc đun sôi nhỏ lửa 10 phút cho ngọt nước rồi rắc hành lá."
+      ]
+    },
+    {
+      "id": "vn_soup_007",
+      "slotRole": "soup",
+      "region": "central",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Canh rau lang nấu tôm tươi",
+      "prepTimeMinutes": 12,
+      "baseNutrition": {
+        "calories": 80.0,
+        "proteinGrams": 9.0,
+        "carbsGrams": 7.0,
+        "fatGrams": 1.5,
+        "fiberGrams": 3.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_soup_007_1",
+          "name": "Rau khoai lang",
+          "amount": 90.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_007_2",
+          "name": "Tôm tươi",
+          "amount": 40.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_soup_007_3",
+          "name": "Tỏi tươi",
+          "amount": 4.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_007_4",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Bóc vỏ tôm tươi, băm nhuyễn rồi ướp với chút tiêu và nước mắm.",
+        "Đun sôi nước lọc cùng tỏi đập dập và thả tôm băm vào khuấy tan.",
+        "Cho rau khoai lang đã nhặt sạch vào nấu sôi 2 phút cho chín xanh."
+      ]
+    },
+    {
+      "id": "vn_soup_008",
+      "slotRole": "soup",
+      "region": "central",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Canh bầu nấu tôm đất",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 70.0,
+        "proteinGrams": 8.0,
+        "carbsGrams": 7.0,
+        "fatGrams": 1.0,
+        "fiberGrams": 2.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_soup_008_1",
+          "name": "Quả bầu tươi",
+          "amount": 110.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_008_2",
+          "name": "Tôm tươi",
+          "amount": 35.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_soup_008_3",
+          "name": "Hành lá",
+          "amount": 10.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_008_4",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Gọt vỏ bầu, băm sợi hoặc thái miếng mỏng vừa ăn; tôm tươi bóc vỏ đập dập.",
+        "Đun sôi nước lọc rồi thả tôm vào nấu khoảng 3 phút cho ngọt nước.",
+        "Cho bầu vào đun sôi thêm 3 phút cho chín mềm, nêm nhạt và rắc hành lá."
+      ]
+    },
+    {
+      "id": "vn_soup_009",
+      "slotRole": "soup",
+      "region": "central",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Canh bí đỏ đậu phộng chay",
+      "prepTimeMinutes": 20,
+      "baseNutrition": {
+        "calories": 100.0,
+        "proteinGrams": 4.0,
+        "carbsGrams": 13.0,
+        "fatGrams": 3.5,
+        "fiberGrams": 2.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_soup_009_1",
+          "name": "Bí đỏ",
+          "amount": 100.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_009_2",
+          "name": "Lạc sống",
+          "amount": 12.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_soup_009_3",
+          "name": "Hành lá",
+          "amount": 10.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_009_4",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Giã dập lạc sống đã ngâm nước ấm rồi cho vào nồi nước lọc ninh 10 phút.",
+        "Thêm bí đỏ cắt khối vuông vào đun tiếp khoảng 8 phút đến khi bí bở mềm.",
+        "Nêm gia vị vừa miệng và rắc hành lá cắt nhỏ lên trên."
+      ]
+    },
+    {
+      "id": "vn_soup_010",
+      "slotRole": "soup",
+      "region": "central",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Canh rau dền thịt nạc bằm",
+      "prepTimeMinutes": 12,
+      "baseNutrition": {
+        "calories": 80.0,
+        "proteinGrams": 8.0,
+        "carbsGrams": 5.0,
+        "fatGrams": 3.0,
+        "fiberGrams": 2.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_soup_010_1",
+          "name": "Rau dền đỏ",
+          "amount": 85.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_010_2",
+          "name": "Thịt nạc vai",
+          "amount": 35.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_soup_010_3",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_soup_010_4",
+          "name": "Nước mắm",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Nhặt lấy ngọn non và lá rau dền đỏ, rửa sạch rồi để ráo.",
+        "Xào sơ thịt nạc vai bằm với chút nước mắm rồi đổ nước lọc vào đun sôi.",
+        "Cho rau dền vào nấu khoảng 3 phút cho chín mềm và nước chuyển màu đẹp."
+      ]
+    },
+    {
+      "id": "vn_soup_011",
+      "slotRole": "soup",
+      "region": "central",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Canh hến nấu cải thìa gừng",
+      "prepTimeMinutes": 12,
+      "baseNutrition": {
+        "calories": 70.0,
+        "proteinGrams": 9.0,
+        "carbsGrams": 5.0,
+        "fatGrams": 1.5,
+        "fiberGrams": 2.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_soup_011_1",
+          "name": "Thịt hến làm sạch",
+          "amount": 50.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_soup_011_2",
+          "name": "Cải thìa",
+          "amount": 85.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_011_3",
+          "name": "Gừng tươi",
+          "amount": 6.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_011_4",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Rửa sạch thịt hến để ráo và thái sợi mỏng gừng tươi.",
+        "Đun sôi nước lọc cùng gừng và thịt hến trong 3 phút, hớt nhẹ bọt.",
+        "Thả cải thìa cắt khúc vào nấu chín tới 2 phút, nêm nhạt và dùng nóng."
+      ]
+    },
+    {
+      "id": "vn_soup_012",
+      "slotRole": "soup",
+      "region": "central",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Canh rong biển đậu hũ non chay",
+      "prepTimeMinutes": 10,
+      "baseNutrition": {
+        "calories": 65.0,
+        "proteinGrams": 6.0,
+        "carbsGrams": 5.0,
+        "fatGrams": 2.5,
+        "fiberGrams": 1.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_soup_012_1",
+          "name": "Đậu hũ non",
+          "amount": 70.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_soup_012_2",
+          "name": "Rong biển khô",
+          "amount": 5.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_012_3",
+          "name": "Gừng tươi",
+          "amount": 5.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_012_4",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Ngâm rong biển khô trong nước mát 5 phút cho nở mềm rồi rửa sạch.",
+        "Đun sôi nước lọc cùng gừng thái sợi và rong biển trong 3 phút.",
+        "Nhẹ tay thả đậu hũ non cắt khối vào đun sôi lăn tăn rồi nêm nhạt."
+      ]
+    },
+    {
+      "id": "vn_soup_013",
+      "slotRole": "soup",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Canh chua cá lóc bạc hà đậu bắp",
+      "prepTimeMinutes": 18,
+      "baseNutrition": {
+        "calories": 100.0,
+        "proteinGrams": 12.0,
+        "carbsGrams": 8.0,
+        "fatGrams": 2.0,
+        "fiberGrams": 2.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_soup_013_1",
+          "name": "Phi lê cá lóc",
+          "amount": 55.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_soup_013_2",
+          "name": "Đậu bắp",
+          "amount": 40.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_013_3",
+          "name": "Dọc mùng",
+          "amount": 40.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_013_4",
+          "name": "Cà chua",
+          "amount": 40.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_013_5",
+          "name": "Nước cốt me",
+          "amount": 15.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_soup_013_6",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Đun sôi nước lọc cùng nước cốt me rồi thả cá lóc vào nấu chín trong 5 phút.",
+        "Cho cà chua, đậu bắp cắt vát và dọc mùng đã bóp muối vào đun thêm 3 phút.",
+        "Nêm gia vị chua ngọt dịu nhẹ, thêm rau ngò ôm rồi tắt bếp."
+      ]
+    },
+    {
+      "id": "vn_soup_014",
+      "slotRole": "soup",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Canh chua tôm tươi giá đỗ cà chua",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 80.0,
+        "proteinGrams": 10.0,
+        "carbsGrams": 7.0,
+        "fatGrams": 1.5,
+        "fiberGrams": 2.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_soup_014_1",
+          "name": "Tôm tươi",
+          "amount": 45.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_soup_014_2",
+          "name": "Giá đỗ",
+          "amount": 45.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_014_3",
+          "name": "Cà chua",
+          "amount": 45.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_014_4",
+          "name": "Dứa tươi",
+          "amount": 30.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_014_5",
+          "name": "Nước cốt me",
+          "amount": 12.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_soup_014_6",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Đun sôi nước lọc cùng nước cốt me, dứa tươi và cà chua khoảng 4 phút.",
+        "Thả tôm tươi bóc vỏ vào nấu chín đỏ rồi nêm nếm vị chua thanh.",
+        "Cho giá đỗ vào tắt bếp ngay để giữ độ giòn tươi."
+      ]
+    },
+    {
+      "id": "vn_soup_015",
+      "slotRole": "soup",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Canh khổ qua nhồi thịt nạc",
+      "prepTimeMinutes": 22,
+      "baseNutrition": {
+        "calories": 100.0,
+        "proteinGrams": 10.0,
+        "carbsGrams": 6.0,
+        "fatGrams": 4.0,
+        "fiberGrams": 2.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_soup_015_1",
+          "name": "Khổ qua",
+          "amount": 85.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_015_2",
+          "name": "Thịt nạc vai",
+          "amount": 45.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_soup_015_3",
+          "name": "Nấm mèo",
+          "amount": 6.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_015_4",
+          "name": "Hành lá",
+          "amount": 10.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_015_5",
+          "name": "Nước lọc",
+          "amount": 280.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Cắt khúc khổ qua bỏ ruột, trộn thịt nạc xay với nấm mèo băm và tiêu rồi nhồi vào.",
+        "Cho khổ qua vào nồi nước lọc đun sôi, hớt bọt rồi hầm lửa nhỏ 15 phút.",
+        "Nêm gia vị nhạt vừa miệng, rắc hành lá và tiêu xay khi múc ra bát."
+      ]
+    },
+    {
+      "id": "vn_soup_016",
+      "slotRole": "soup",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Canh cải ngọt nấu nấm rơm chay",
+      "prepTimeMinutes": 10,
+      "baseNutrition": {
+        "calories": 50.0,
+        "proteinGrams": 3.5,
+        "carbsGrams": 6.0,
+        "fatGrams": 1.0,
+        "fiberGrams": 2.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_soup_016_1",
+          "name": "Cải ngọt",
+          "amount": 90.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_016_2",
+          "name": "Nấm rơm",
+          "amount": 45.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_016_3",
+          "name": "Gừng tươi",
+          "amount": 5.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_016_4",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Rửa sạch nấm rơm bổ đôi và cắt khúc cải ngọt vừa ăn.",
+        "Đun sôi nước lọc cùng gừng đập dập và nấm rơm trong 4 phút.",
+        "Thả cải ngọt vào nấu sôi lại 2 phút, nêm nhạt và tắt bếp."
+      ]
+    },
+    {
+      "id": "vn_soup_017",
+      "slotRole": "soup",
+      "region": "south",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Canh rau củ hầm cà rốt khoai tây chay",
+      "prepTimeMinutes": 20,
+      "baseNutrition": {
+        "calories": 90.0,
+        "proteinGrams": 3.0,
+        "carbsGrams": 17.0,
+        "fatGrams": 1.0,
+        "fiberGrams": 3.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_soup_017_1",
+          "name": "Khoai tây",
+          "amount": 60.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_soup_017_2",
+          "name": "Cà rốt",
+          "amount": 50.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_017_3",
+          "name": "Củ cải trắng",
+          "amount": 40.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_017_4",
+          "name": "Rau mùi",
+          "amount": 8.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_017_5",
+          "name": "Nước lọc",
+          "amount": 280.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Gọt vỏ khoai tây, cà rốt và củ cải trắng rồi cắt miếng vuông vừa ăn.",
+        "Cho toàn bộ rau củ vào nồi nước lọc hầm lửa vừa khoảng 15 phút cho chín mềm.",
+        "Nêm gia vị thanh nhẹ và rắc rau mùi cắt nhỏ lên mặt canh."
+      ]
+    },
+    {
+      "id": "vn_soup_018",
+      "slotRole": "soup",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": false,
+      "name": "Canh tần ô nấu thịt nạc bằm",
+      "prepTimeMinutes": 10,
+      "baseNutrition": {
+        "calories": 75.0,
+        "proteinGrams": 8.0,
+        "carbsGrams": 5.0,
+        "fatGrams": 2.5,
+        "fiberGrams": 2.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_soup_018_1",
+          "name": "Rau tần ô",
+          "amount": 90.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_soup_018_2",
+          "name": "Thịt nạc vai",
+          "amount": 35.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_soup_018_3",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_soup_018_4",
+          "name": "Nước mắm",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Nhặt rửa sạch rau tần ô, cắt khúc vừa ăn và để ráo nước.",
+        "Đun sôi nước lọc, thả thịt nạc vai bằm đã ướp chút nước mắm vào khuấy nhẹ.",
+        "Cho rau tần ô vào đun sôi lại 1 phút rồi tắt bếp ngay để giữ hương thơm."
+      ]
+    },
+    {
+      "id": "vn_fruit_001",
+      "slotRole": "fruit",
+      "region": "all",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": true,
+      "name": "Ổi tươi cắt miếng",
+      "prepTimeMinutes": 3,
+      "baseNutrition": {
+        "calories": 75.0,
+        "proteinGrams": 2.5,
+        "carbsGrams": 14.0,
+        "fatGrams": 1.0,
+        "fiberGrams": 6.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_fruit_001_1",
+          "name": "Ổi tươi",
+          "amount": 120.0,
+          "unit": "g",
+          "category": "Rau củ"
+        }
+      ],
+      "steps": [
+        "Ngâm rửa sạch ổi tươi dưới vòi nước lạnh rồi để ráo.",
+        "Bổ ổi thành múi cau vừa ăn, có thể bỏ bớt hạt cứng nếu thích.",
+        "Bày ra đĩa và dùng tráng miệng ngay để giữ độ giòn ngọt."
+      ]
+    },
+    {
+      "id": "vn_fruit_002",
+      "slotRole": "fruit",
+      "region": "all",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": true,
+      "name": "Bưởi da xanh tách múi",
+      "prepTimeMinutes": 5,
+      "baseNutrition": {
+        "calories": 60.0,
+        "proteinGrams": 1.0,
+        "carbsGrams": 14.0,
+        "fatGrams": 0.2,
+        "fiberGrams": 2.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_fruit_002_1",
+          "name": "Múi bưởi tươi",
+          "amount": 150.0,
+          "unit": "g",
+          "category": "Rau củ"
+        }
+      ],
+      "steps": [
+        "Bóc sạch lớp vỏ lụa trắng bên ngoài từng múi bưởi để không bị the.",
+        "Tách nhẹ phần tép bưởi mọng nước và bỏ hạt.",
+        "Bày ra đĩa mát lạnh để thưởng thức sau bữa ăn chính."
+      ]
+    },
+    {
+      "id": "vn_fruit_003",
+      "slotRole": "fruit",
+      "region": "all",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": true,
+      "name": "Táo tươi cắt lát",
+      "prepTimeMinutes": 3,
+      "baseNutrition": {
+        "calories": 70.0,
+        "proteinGrams": 0.5,
+        "carbsGrams": 17.0,
+        "fatGrams": 0.2,
+        "fiberGrams": 3.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_fruit_003_1",
+          "name": "Táo tươi",
+          "amount": 130.0,
+          "unit": "g",
+          "category": "Rau củ"
+        }
+      ],
+      "steps": [
+        "Rửa sạch táo tươi dưới vòi nước rồi thấm khô vỏ.",
+        "Cắt táo thành từng lát mỏng đều nhau, loại bỏ phần lõi hạt.",
+        "Xếp ra đĩa và dùng ngay để tránh bị thâm mặt cắt."
+      ]
+    },
+    {
+      "id": "vn_fruit_004",
+      "slotRole": "fruit",
+      "region": "all",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": true,
+      "name": "Thanh long tươi cắt khối",
+      "prepTimeMinutes": 4,
+      "baseNutrition": {
+        "calories": 80.0,
+        "proteinGrams": 1.5,
+        "carbsGrams": 18.0,
+        "fatGrams": 0.5,
+        "fiberGrams": 4.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_fruit_004_1",
+          "name": "Thanh long tươi",
+          "amount": 150.0,
+          "unit": "g",
+          "category": "Rau củ"
+        }
+      ],
+      "steps": [
+        "Rửa vỏ ngoài quả thanh long, bổ đôi rồi bóc tách sạch lớp vỏ hồng.",
+        "Cắt phần ruột thanh long thành khối vuông vừa miệng.",
+        "Để mát nhẹ vài phút trước khi dọn lên bàn ăn."
+      ]
+    },
+    {
+      "id": "vn_fruit_005",
+      "slotRole": "fruit",
+      "region": "all",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": true,
+      "name": "Cam sành tươi cắt múi",
+      "prepTimeMinutes": 4,
+      "baseNutrition": {
+        "calories": 75.0,
+        "proteinGrams": 1.5,
+        "carbsGrams": 17.0,
+        "fatGrams": 0.2,
+        "fiberGrams": 3.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_fruit_005_1",
+          "name": "Cam tươi",
+          "amount": 150.0,
+          "unit": "g",
+          "category": "Rau củ"
+        }
+      ],
+      "steps": [
+        "Rửa sạch vỏ cam tươi rồi lau khô bằng khăn sạch.",
+        "Bổ cam thành các múi cau đều nhau và gạt bỏ bớt hạt.",
+        "Thưởng thức trực tiếp để bổ sung vitamin C và chất xơ."
+      ]
+    },
+    {
+      "id": "vn_fruit_006",
+      "slotRole": "fruit",
+      "region": "all",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": true,
+      "name": "Dưa hấu đỏ mát lạnh",
+      "prepTimeMinutes": 4,
+      "baseNutrition": {
+        "calories": 55.0,
+        "proteinGrams": 1.0,
+        "carbsGrams": 13.0,
+        "fatGrams": 0.2,
+        "fiberGrams": 1.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_fruit_006_1",
+          "name": "Dưa hấu đỏ",
+          "amount": 180.0,
+          "unit": "g",
+          "category": "Rau củ"
+        }
+      ],
+      "steps": [
+        "Gọt bỏ phần vỏ xanh và cùi trắng của miếng dưa hấu.",
+        "Cắt phần ruột đỏ thành các miếng tam giác hoặc khối vuông vừa ăn.",
+        "Bày ra đĩa và thưởng thức lạnh nhẹ cho thanh mát."
+      ]
+    },
+    {
+      "id": "vn_fruit_007",
+      "slotRole": "fruit",
+      "region": "all",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": true,
+      "name": "Đu đủ chín cắt khối",
+      "prepTimeMinutes": 4,
+      "baseNutrition": {
+        "calories": 65.0,
+        "proteinGrams": 0.8,
+        "carbsGrams": 15.0,
+        "fatGrams": 0.3,
+        "fiberGrams": 2.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_fruit_007_1",
+          "name": "Đu đủ chín",
+          "amount": 150.0,
+          "unit": "g",
+          "category": "Rau củ"
+        }
+      ],
+      "steps": [
+        "Gọt sạch vỏ ngoài quả đu đủ chín và dùng thìa nạo sạch phần hạt đen.",
+        "Cắt phần thịt đu đủ thành các miếng vuông gọn gàng.",
+        "Xếp ra đĩa tráng miệng để hỗ trợ tiêu hóa nhẹ nhàng sau bữa ăn."
+      ]
+    },
+    {
+      "id": "vn_fruit_008",
+      "slotRole": "fruit",
+      "region": "all",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": true,
+      "name": "Lê tươi gọt vỏ",
+      "prepTimeMinutes": 3,
+      "baseNutrition": {
+        "calories": 80.0,
+        "proteinGrams": 0.5,
+        "carbsGrams": 20.0,
+        "fatGrams": 0.2,
+        "fiberGrams": 4.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_fruit_008_1",
+          "name": "Lê tươi",
+          "amount": 140.0,
+          "unit": "g",
+          "category": "Rau củ"
+        }
+      ],
+      "steps": [
+        "Rửa sạch quả lê tươi và gọt bỏ lớp vỏ mỏng bên ngoài.",
+        "Bổ lê thành miếng vừa ăn, loại bỏ phần lõi cứng ở giữa.",
+        "Bày ra đĩa và dùng ngay khi còn giòn mọng nước."
+      ]
+    },
+    {
+      "id": "vn_fruit_009",
+      "slotRole": "fruit",
+      "region": "all",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Chuối tiêu chín",
+      "prepTimeMinutes": 2,
+      "baseNutrition": {
+        "calories": 100.0,
+        "proteinGrams": 1.2,
+        "carbsGrams": 23.0,
+        "fatGrams": 0.3,
+        "fiberGrams": 3.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_fruit_009_1",
+          "name": "Chuối chín",
+          "amount": 1.0,
+          "unit": "quả",
+          "category": "Rau củ"
+        }
+      ],
+      "steps": [
+        "Chọn quả chuối chín vàng đều, bóc sạch vỏ và phần xơ dọc thân chuối.",
+        "Cắt khoanh tròn vừa ăn hoặc để nguyên quả tùy sở thích.",
+        "Dùng tráng miệng sau bữa ăn để bổ sung kali và năng lượng."
+      ]
+    },
+    {
+      "id": "vn_fruit_010",
+      "slotRole": "fruit",
+      "region": "all",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Xoài chín cắt miếng",
+      "prepTimeMinutes": 4,
+      "baseNutrition": {
+        "calories": 95.0,
+        "proteinGrams": 1.2,
+        "carbsGrams": 22.0,
+        "fatGrams": 0.5,
+        "fiberGrams": 2.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_fruit_010_1",
+          "name": "Xoài chín",
+          "amount": 150.0,
+          "unit": "g",
+          "category": "Rau củ"
+        }
+      ],
+      "steps": [
+        "Rửa sạch vỏ xoài chín, gọt vỏ rồi tách hai má thịt sát hạt.",
+        "Khứa caro hoặc cắt thịt xoài thành miếng vuông vừa miệng.",
+        "Bày ra đĩa và thưởng thức ngay khi xoài thơm ngọt."
+      ]
+    },
+    {
+      "id": "vn_fruit_011",
+      "slotRole": "fruit",
+      "region": "all",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Bơ sáp chín cắt lát",
+      "prepTimeMinutes": 4,
+      "baseNutrition": {
+        "calories": 115.0,
+        "proteinGrams": 1.3,
+        "carbsGrams": 5.5,
+        "fatGrams": 9.5,
+        "fiberGrams": 4.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_fruit_011_1",
+          "name": "Thịt bơ sáp chín",
+          "amount": 65.0,
+          "unit": "g",
+          "category": "Rau củ"
+        }
+      ],
+      "steps": [
+        "Bổ đôi quả bơ sáp chín mềm, tách bỏ hạt và lột nhẹ lớp vỏ xanh.",
+        "Thái thịt bơ thành lát mỏng hoặc khối vuông đều đẹp.",
+        "Thưởng thức trực tiếp để bổ sung chất béo lành mạnh."
+      ]
+    },
+    {
+      "id": "vn_fruit_012",
+      "slotRole": "fruit",
+      "region": "all",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Nho tươi rửa sạch",
+      "prepTimeMinutes": 3,
+      "baseNutrition": {
+        "calories": 100.0,
+        "proteinGrams": 1.0,
+        "carbsGrams": 24.0,
+        "fatGrams": 0.2,
+        "fiberGrams": 1.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_fruit_012_1",
+          "name": "Nho tươi",
+          "amount": 140.0,
+          "unit": "g",
+          "category": "Rau củ"
+        }
+      ],
+      "steps": [
+        "Cắt nhỏ chùm nho tươi, ngâm nhanh trong nước muối loãng 2 phút.",
+        "Rửa lại thật nhẹ tay dưới vòi nước sạch để không bị dập vỏ.",
+        "Để ráo nước rồi bày ra đĩa dùng tráng miệng."
+      ]
+    },
+    {
+      "id": "vn_vsav_001",
+      "slotRole": "main_savory",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": true,
+      "name": "Đậu hũ sốt cà chua nấm hương",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 140.0,
+        "proteinGrams": 11.0,
+        "carbsGrams": 8.0,
+        "fatGrams": 7.0,
+        "fiberGrams": 2.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsav_001_1",
+          "name": "Đậu hũ",
+          "amount": 100.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_vsav_001_2",
+          "name": "Cà chua",
+          "amount": 75.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_001_3",
+          "name": "Nấm hương tươi",
+          "amount": 40.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_001_4",
+          "name": "Dầu ô liu",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_001_5",
+          "name": "Nước tương",
+          "amount": 6.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Cắt miếng vuông đậu hũ rồi áp chảo sơ với chút dầu ô liu cho vàng nhẹ hai mặt.",
+        "Xào nhuyễn cà chua thái hạt lựu cùng nấm hương cắt lát và nước tương.",
+        "Thả đậu hũ vào rim nhỏ lửa 6 phút cho thấm sốt cà chua rồi rắc tiêu xay."
+      ]
+    },
+    {
+      "id": "vn_vsav_002",
+      "slotRole": "main_savory",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": true,
+      "name": "Nấm đùi gà kho tiêu bắc",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 105.0,
+        "proteinGrams": 6.0,
+        "carbsGrams": 11.0,
+        "fatGrams": 4.0,
+        "fiberGrams": 3.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsav_002_1",
+          "name": "Nấm đùi gà",
+          "amount": 140.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_002_2",
+          "name": "Hành lá",
+          "amount": 10.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_002_3",
+          "name": "Nước tương",
+          "amount": 8.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_002_4",
+          "name": "Dầu ô liu",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_002_5",
+          "name": "Đường",
+          "amount": 3.0,
+          "unit": "g",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Rửa sạch nấm đùi gà, cắt khoanh tròn dày vừa ăn và khứa nhẹ bề mặt.",
+        "Áp chảo sơ nấm với dầu ô liu cho se mặt rồi thêm nước tương và đường.",
+        "Kho nhỏ lửa khoảng 8 phút đến khi nước sánh bám đều nấm, rắc tiêu và hành lá."
+      ]
+    },
+    {
+      "id": "vn_vsav_003",
+      "slotRole": "main_savory",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": true,
+      "name": "Đậu cô ve xào nấm rơm",
+      "prepTimeMinutes": 12,
+      "baseNutrition": {
+        "calories": 105.0,
+        "proteinGrams": 5.0,
+        "carbsGrams": 11.0,
+        "fatGrams": 4.5,
+        "fiberGrams": 4.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsav_003_1",
+          "name": "Đậu cô ve",
+          "amount": 100.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_003_2",
+          "name": "Nấm rơm",
+          "amount": 70.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_003_3",
+          "name": "Tỏi tươi",
+          "amount": 5.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_003_4",
+          "name": "Dầu ô liu",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_003_5",
+          "name": "Nước tương",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Tước xơ đậu cô ve cắt vát chéo rồi chần qua nước sôi 1 phút cho xanh giòn.",
+        "Phi thơm tỏi với dầu ô liu, xào nấm rơm bổ đôi trên lửa lớn trong 2 phút.",
+        "Cho đậu cô ve vào đảo chung với nước tương thêm 2 phút rồi tắt bếp."
+      ]
+    },
+    {
+      "id": "vn_vsav_004",
+      "slotRole": "main_savory",
+      "region": "north",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Chả lá lốt đậu hũ nấm mèo",
+      "prepTimeMinutes": 20,
+      "baseNutrition": {
+        "calories": 160.0,
+        "proteinGrams": 11.0,
+        "carbsGrams": 9.0,
+        "fatGrams": 9.0,
+        "fiberGrams": 3.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsav_004_1",
+          "name": "Đậu hũ",
+          "amount": 100.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_vsav_004_2",
+          "name": "Lá lốt",
+          "amount": 25.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_004_3",
+          "name": "Nấm mèo",
+          "amount": 15.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_004_4",
+          "name": "Dầu ô liu",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_004_5",
+          "name": "Nước tương",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Bóp nhuyễn đậu hũ đã ép ráo nước cùng nấm mèo ngâm nở băm nhỏ, tiêu và nước tương.",
+        "Đặt nhân vào mặt trong lá lốt sạch rồi cuộn gọn tay từng cuốn.",
+        "Áp chảo với dầu ô liu ở lửa vừa đến khi lá dậy mùi thơm và chín đều."
+      ]
+    },
+    {
+      "id": "vn_vsav_005",
+      "slotRole": "main_savory",
+      "region": "north",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Chả đậu xanh áp chảo thì là",
+      "prepTimeMinutes": 20,
+      "baseNutrition": {
+        "calories": 190.0,
+        "proteinGrams": 10.0,
+        "carbsGrams": 22.0,
+        "fatGrams": 7.0,
+        "fiberGrams": 4.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsav_005_1",
+          "name": "Đậu xanh tách vỏ hấp",
+          "amount": 90.0,
+          "unit": "g",
+          "category": "Tinh bột"
+        },
+        {
+          "id": "ing_vsav_005_2",
+          "name": "Đậu hũ",
+          "amount": 40.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_vsav_005_3",
+          "name": "Rau thì là",
+          "amount": 12.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_005_4",
           "name": "Dầu ô liu",
           "amount": 5.0,
           "unit": "ml",
@@ -490,9 +5476,1293 @@
         }
       ],
       "steps": [
-        "Xào chín mềm cà chua với dầu ô liu, cho đậu hũ non và trứng khuấy nhẹ vào đun 3 phút.",
-        "Nấu sôi nước, cho rau ngót vào nấu canh nêm nhạt.",
-        "Dùng kèm cơm trắng khi còn ấm."
+        "Nghiền mịn đậu xanh tách vỏ hấp chín cùng đậu hũ ráo nước và thì là cắt nhỏ.",
+        "Nêm chút muối tiêu, trộn dẻo rồi nặn thành từng miếng chả dẹt vừa ăn.",
+        "Áp chảo với dầu ô liu trên lửa nhỏ mỗi mặt 3 phút đến khi vàng giòn nhẹ."
+      ]
+    },
+    {
+      "id": "vn_vsav_006",
+      "slotRole": "main_savory",
+      "region": "north",
+      "goals": [
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Đậu hũ kho riềng tương đậu nành",
+      "prepTimeMinutes": 22,
+      "baseNutrition": {
+        "calories": 210.0,
+        "proteinGrams": 14.0,
+        "carbsGrams": 11.0,
+        "fatGrams": 12.0,
+        "fiberGrams": 3.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsav_006_1",
+          "name": "Đậu hũ",
+          "amount": 130.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_vsav_006_2",
+          "name": "Riềng tươi",
+          "amount": 20.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_006_3",
+          "name": "Tương đậu nành",
+          "amount": 15.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_006_4",
+          "name": "Dầu ô liu",
+          "amount": 6.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_006_5",
+          "name": "Nước lọc",
+          "amount": 80.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Cắt miếng dày đậu hũ và áp chảo vàng đều các mặt với dầu ô liu.",
+        "Lót riềng thái lát dưới đáy nồi, xếp đậu hũ lên trên cùng tương đậu nành và nước lọc.",
+        "Kho nhỏ lửa khoảng 15 phút cho đậu hũ săn lại và đậm hương riềng tương."
+      ]
+    },
+    {
+      "id": "vn_vsav_007",
+      "slotRole": "main_savory",
+      "region": "central",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": true,
+      "name": "Đậu hũ kho sả ớt miền Trung",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 135.0,
+        "proteinGrams": 11.0,
+        "carbsGrams": 7.0,
+        "fatGrams": 7.0,
+        "fiberGrams": 2.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsav_007_1",
+          "name": "Đậu hũ",
+          "amount": 110.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_vsav_007_2",
+          "name": "Sả tươi",
+          "amount": 20.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_007_3",
+          "name": "Dầu ô liu",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_007_4",
+          "name": "Nước tương",
+          "amount": 8.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Cắt miếng vuông đậu hũ rồi áp chảo vàng nhẹ với một nửa lượng dầu ô liu.",
+        "Phi thơm sả băm và chút ớt với phần dầu còn lại rồi thêm nước tương và ít nước lọc.",
+        "Cho đậu hũ vào rim nhỏ lửa 7 phút cho áo đều sả thơm."
+      ]
+    },
+    {
+      "id": "vn_vsav_008",
+      "slotRole": "main_savory",
+      "region": "central",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": true,
+      "name": "Mít non kho tiêu nước tương",
+      "prepTimeMinutes": 25,
+      "baseNutrition": {
+        "calories": 120.0,
+        "proteinGrams": 4.0,
+        "carbsGrams": 18.0,
+        "fatGrams": 3.5,
+        "fiberGrams": 4.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsav_008_1",
+          "name": "Mít non đã luộc",
+          "amount": 120.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_008_2",
+          "name": "Sả tươi",
+          "amount": 15.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_008_3",
+          "name": "Nước tương",
+          "amount": 8.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_008_4",
+          "name": "Dầu ô liu",
+          "amount": 3.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_008_5",
+          "name": "Nước lọc",
+          "amount": 80.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Cắt miếng vừa ăn mít non đã luộc mềm, ướp với nước tương và tiêu trong 10 phút.",
+        "Phi thơm sả băm với dầu ô liu rồi cho mít non vào đảo săn hai mặt.",
+        "Thêm nước lọc kho liu riu 15 phút cho mít thấm đẫm vị mặn ngọt dịu."
+      ]
+    },
+    {
+      "id": "vn_vsav_009",
+      "slotRole": "main_savory",
+      "region": "central",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": true,
+      "name": "Nấm bào ngư xào sả ớt",
+      "prepTimeMinutes": 12,
+      "baseNutrition": {
+        "calories": 105.0,
+        "proteinGrams": 5.0,
+        "carbsGrams": 10.0,
+        "fatGrams": 5.0,
+        "fiberGrams": 3.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsav_009_1",
+          "name": "Nấm bào ngư",
+          "amount": 140.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_009_2",
+          "name": "Sả tươi",
+          "amount": 20.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_009_3",
+          "name": "Dầu ô liu",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_009_4",
+          "name": "Nước tương",
+          "amount": 6.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Rửa sạch nấm bào ngư với nước muối loãng, xé miếng vừa ăn và vắt nhẹ cho ráo.",
+        "Phi thơm sả băm với dầu ô liu trên lửa vừa.",
+        "Cho nấm bào ngư và nước tương vào đảo nhanh lửa lớn 3 phút cho săn ngọt."
+      ]
+    },
+    {
+      "id": "vn_vsav_010",
+      "slotRole": "main_savory",
+      "region": "central",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Tàu hũ ky rim nước tương gừng",
+      "prepTimeMinutes": 18,
+      "baseNutrition": {
+        "calories": 185.0,
+        "proteinGrams": 14.0,
+        "carbsGrams": 9.0,
+        "fatGrams": 10.0,
+        "fiberGrams": 2.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsav_010_1",
+          "name": "Tàu hũ ky tươi",
+          "amount": 90.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_vsav_010_2",
+          "name": "Gừng tươi",
+          "amount": 10.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_010_3",
+          "name": "Nước tương",
+          "amount": 8.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_010_4",
+          "name": "Dầu ô liu",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_010_5",
+          "name": "Đường",
+          "amount": 3.0,
+          "unit": "g",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Cắt khúc vừa ăn tàu hũ ky tươi rồi áp chảo sơ với dầu ô liu cho xém vàng nhẹ.",
+        "Pha nước tương, đường, gừng thái sợi và chút nước lọc rồi đổ vào chảo.",
+        "Rim lửa nhỏ khoảng 8 phút đến khi sốt cạn sánh bám đều từng miếng tàu hũ ky."
+      ]
+    },
+    {
+      "id": "vn_vsav_011",
+      "slotRole": "main_savory",
+      "region": "central",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Bí đỏ xào tỏi lạc rang chay",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 170.0,
+        "proteinGrams": 5.0,
+        "carbsGrams": 19.0,
+        "fatGrams": 8.0,
+        "fiberGrams": 3.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsav_011_1",
+          "name": "Bí đỏ",
+          "amount": 140.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_011_2",
+          "name": "Lạc rang",
+          "amount": 12.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_vsav_011_3",
+          "name": "Tỏi tươi",
+          "amount": 6.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_011_4",
+          "name": "Dầu ô liu",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Gọt vỏ bí đỏ, thái lát mỏng đều nhau để chín nhanh mà không bị nát.",
+        "Phi thơm tỏi băm với dầu ô liu, cho bí đỏ cùng chút nước lọc vào đảo chín mềm.",
+        "Nêm nhạt, bày ra đĩa và rắc lạc rang giã dập lên trên."
+      ]
+    },
+    {
+      "id": "vn_vsav_012",
+      "slotRole": "main_savory",
+      "region": "central",
+      "goals": [
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Nấm rơm kho đậu hũ nước dừa",
+      "prepTimeMinutes": 20,
+      "baseNutrition": {
+        "calories": 210.0,
+        "proteinGrams": 13.0,
+        "carbsGrams": 12.0,
+        "fatGrams": 12.0,
+        "fiberGrams": 3.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsav_012_1",
+          "name": "Đậu hũ",
+          "amount": 120.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_vsav_012_2",
+          "name": "Nấm rơm",
+          "amount": 80.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_012_3",
+          "name": "Nước dừa tươi",
+          "amount": 100.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_012_4",
+          "name": "Nước tương",
+          "amount": 8.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_012_5",
+          "name": "Dầu ô liu",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Áp chảo vàng nhẹ đậu hũ cắt khối vuông với dầu ô liu rồi gắp ra đĩa.",
+        "Xào nhanh nấm rơm bổ đôi với nước tương, thêm đậu hũ và nước dừa tươi vào nồi.",
+        "Kho nhỏ lửa khoảng 12 phút cho nước sánh lại và thấm vị ngọt thanh của dừa."
+      ]
+    },
+    {
+      "id": "vn_vsav_013",
+      "slotRole": "main_savory",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": true,
+      "name": "Khổ qua kho tương đậu hũ",
+      "prepTimeMinutes": 20,
+      "baseNutrition": {
+        "calories": 130.0,
+        "proteinGrams": 10.0,
+        "carbsGrams": 9.0,
+        "fatGrams": 6.0,
+        "fiberGrams": 3.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsav_013_1",
+          "name": "Khổ qua",
+          "amount": 100.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_013_2",
+          "name": "Đậu hũ",
+          "amount": 90.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_vsav_013_3",
+          "name": "Nước tương",
+          "amount": 8.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_013_4",
+          "name": "Dầu ô liu",
+          "amount": 3.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_013_5",
+          "name": "Nước lọc",
+          "amount": 80.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Bỏ ruột khổ qua, cắt khúc vừa ăn rồi trụng sơ nước sôi 1 phút cho dịu vị đắng.",
+        "Áp chảo sơ đậu hũ với dầu ô liu rồi xếp cùng khổ qua vào nồi đất.",
+        "Thêm nước tương, tiêu và nước lọc kho nhỏ lửa 12 phút đến khi khổ qua chín mềm."
+      ]
+    },
+    {
+      "id": "vn_vsav_014",
+      "slotRole": "main_savory",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": true,
+      "name": "Cà tím nướng mỡ hành dầu ô liu",
+      "prepTimeMinutes": 18,
+      "baseNutrition": {
+        "calories": 115.0,
+        "proteinGrams": 3.0,
+        "carbsGrams": 12.0,
+        "fatGrams": 6.0,
+        "fiberGrams": 4.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsav_014_1",
+          "name": "Cà tím",
+          "amount": 160.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_014_2",
+          "name": "Hành lá",
+          "amount": 20.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_014_3",
+          "name": "Dầu ô liu",
+          "amount": 6.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_014_4",
+          "name": "Nước tương",
+          "amount": 6.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Rửa sạch cà tím, nướng chín mềm trên chảo gang hoặc nồi chiên không dầu 12 phút.",
+        "Đun nóng dầu ô liu rồi đổ vào bát hành lá thái nhỏ tạo sốt hành thơm xanh.",
+        "Xẻ dọc quả cà tím nóng, rưới sốt hành dầu ô liu cùng chút nước tương tỏi ớt."
+      ]
+    },
+    {
+      "id": "vn_vsav_015",
+      "slotRole": "main_savory",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain"
+      ],
+      "isVegetarian": true,
+      "name": "Đậu bắp xào nấm hương tươi",
+      "prepTimeMinutes": 12,
+      "baseNutrition": {
+        "calories": 105.0,
+        "proteinGrams": 4.5,
+        "carbsGrams": 11.0,
+        "fatGrams": 4.5,
+        "fiberGrams": 4.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsav_015_1",
+          "name": "Đậu bắp",
+          "amount": 110.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_015_2",
+          "name": "Nấm hương tươi",
+          "amount": 65.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_015_3",
+          "name": "Tỏi tươi",
+          "amount": 5.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_015_4",
+          "name": "Dầu ô liu",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_015_5",
+          "name": "Nước tương",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Rửa sạch đậu bắp, cắt vát miếng vừa ăn và thái đôi nấm hương tươi.",
+        "Phi thơm tỏi với dầu ô liu rồi xào nấm hương trong 2 phút trên lửa lớn.",
+        "Cho đậu bắp và nước tương vào đảo nhanh 2 phút cho chín giòn, không bị nhớt."
+      ]
+    },
+    {
+      "id": "vn_vsav_016",
+      "slotRole": "main_savory",
+      "region": "south",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Đậu hũ kho nấm rơm tiêu xanh",
+      "prepTimeMinutes": 18,
+      "baseNutrition": {
+        "calories": 165.0,
+        "proteinGrams": 12.0,
+        "carbsGrams": 9.0,
+        "fatGrams": 9.0,
+        "fiberGrams": 2.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsav_016_1",
+          "name": "Đậu hũ",
+          "amount": 110.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_vsav_016_2",
+          "name": "Nấm rơm",
+          "amount": 70.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_016_3",
+          "name": "Tiêu xanh",
+          "amount": 8.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_016_4",
+          "name": "Dầu ô liu",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_016_5",
+          "name": "Nước tương",
+          "amount": 8.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Cắt miếng vuông đậu hũ, áp chảo vàng nhẹ với dầu ô liu cho chắc miếng.",
+        "Cho đậu hũ, nấm rơm, tiêu xanh đập dập, nước tương và ít nước lọc vào nồi đất.",
+        "Kho nhỏ lửa khoảng 10 phút đến khi nước sánh nhẹ và thơm nồng vị tiêu xanh."
+      ]
+    },
+    {
+      "id": "vn_vsav_017",
+      "slotRole": "main_savory",
+      "region": "south",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Tàu hũ ky cuộn nấm rim chua ngọt",
+      "prepTimeMinutes": 20,
+      "baseNutrition": {
+        "calories": 190.0,
+        "proteinGrams": 13.0,
+        "carbsGrams": 14.0,
+        "fatGrams": 9.0,
+        "fiberGrams": 2.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsav_017_1",
+          "name": "Tàu hũ ky tươi",
+          "amount": 80.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_vsav_017_2",
+          "name": "Nấm hương tươi",
+          "amount": 45.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_017_3",
+          "name": "Cà chua",
+          "amount": 45.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_017_4",
+          "name": "Dầu ô liu",
+          "amount": 4.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_017_5",
+          "name": "Nước cốt me",
+          "amount": 10.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_017_6",
+          "name": "Đường",
+          "amount": 5.0,
+          "unit": "g",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Cuộn nấm hương thái sợi vào lá tàu hũ ky tươi rồi áp chảo vàng nhẹ với dầu ô liu.",
+        "Đun sôi hỗn hợp cà chua băm, nước cốt me, đường và chút nước tương thành sốt sánh.",
+        "Cho cuộn tàu hũ ky vào rim nhỏ lửa 5 phút cho thấm đều vị chua ngọt."
+      ]
+    },
+    {
+      "id": "vn_vsav_018",
+      "slotRole": "main_savory",
+      "region": "south",
+      "goals": [
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Nấm đùi gà kho tàu nước dừa chay",
+      "prepTimeMinutes": 25,
+      "baseNutrition": {
+        "calories": 210.0,
+        "proteinGrams": 12.0,
+        "carbsGrams": 16.0,
+        "fatGrams": 11.0,
+        "fiberGrams": 3.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsav_018_1",
+          "name": "Nấm đùi gà",
+          "amount": 90.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsav_018_2",
+          "name": "Đậu hũ",
+          "amount": 95.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_vsav_018_3",
+          "name": "Nước dừa tươi",
+          "amount": 120.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_018_4",
+          "name": "Nước tương",
+          "amount": 8.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsav_018_5",
+          "name": "Dầu ô liu",
+          "amount": 5.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Cắt khúc vuông nấm đùi gà và đậu hũ, áp chảo sơ với dầu ô liu cho xém cạnh.",
+        "Cho vào nồi cùng nước dừa tươi và nước tương, đun sôi rồi hạ nhỏ lửa.",
+        "Kho liu riu 18 phút đến khi nước rút sánh màu cánh gián, rắc tiêu xay."
+      ]
+    },
+    {
+      "id": "vn_vsoup_001",
+      "slotRole": "soup",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Canh rau ngót nấu nấm rơm chay",
+      "prepTimeMinutes": 10,
+      "baseNutrition": {
+        "calories": 45.0,
+        "proteinGrams": 3.5,
+        "carbsGrams": 6.0,
+        "fatGrams": 1.0,
+        "fiberGrams": 3.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsoup_001_1",
+          "name": "Rau ngót",
+          "amount": 80.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsoup_001_2",
+          "name": "Nấm rơm",
+          "amount": 45.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsoup_001_3",
+          "name": "Dầu ô liu",
+          "amount": 1.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsoup_001_4",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Tuốt lá rau ngót, rửa sạch vò nhẹ và bổ đôi nấm rơm tươi.",
+        "Đảo sơ nấm rơm với chút dầu ô liu rồi đổ nước lọc vào đun sôi.",
+        "Thả rau ngót vào nấu khoảng 4 phút cho chín mềm và nêm muối nhạt."
+      ]
+    },
+    {
+      "id": "vn_vsoup_002",
+      "slotRole": "soup",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Canh bí đao nấu nấm hương chay",
+      "prepTimeMinutes": 12,
+      "baseNutrition": {
+        "calories": 55.0,
+        "proteinGrams": 3.0,
+        "carbsGrams": 8.0,
+        "fatGrams": 1.0,
+        "fiberGrams": 2.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsoup_002_1",
+          "name": "Bí đao",
+          "amount": 110.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsoup_002_2",
+          "name": "Nấm hương tươi",
+          "amount": 45.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsoup_002_3",
+          "name": "Gừng tươi",
+          "amount": 5.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsoup_002_4",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Gọt vỏ bỏ ruột bí đao cắt miếng vừa ăn và thái lát nấm hương tươi.",
+        "Đun sôi nước lọc cùng gừng đập dập và nấm hương trong 5 phút cho thơm ngọt.",
+        "Thả bí đao vào nấu chín trong 4 phút, nêm nhạt và tắt bếp."
+      ]
+    },
+    {
+      "id": "vn_vsoup_003",
+      "slotRole": "soup",
+      "region": "north",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Canh mồng tơi mướp nấu đậu hũ non",
+      "prepTimeMinutes": 10,
+      "baseNutrition": {
+        "calories": 65.0,
+        "proteinGrams": 5.5,
+        "carbsGrams": 6.0,
+        "fatGrams": 2.0,
+        "fiberGrams": 2.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsoup_003_1",
+          "name": "Rau mồng tơi",
+          "amount": 60.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsoup_003_2",
+          "name": "Mướp hương",
+          "amount": 50.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsoup_003_3",
+          "name": "Đậu hũ non",
+          "amount": 60.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_vsoup_003_4",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Rửa sạch rau mồng tơi thái nhỏ và gọt vỏ mướp hương cắt miếng vát.",
+        "Đun sôi nước lọc, thả mướp và rau mồng tơi vào nấu khoảng 2 phút.",
+        "Nhẹ tay cho đậu hũ non cắt khối vào đun sôi lăn tăn, nêm gia vị thanh nhẹ."
+      ]
+    },
+    {
+      "id": "vn_vsoup_004",
+      "slotRole": "soup",
+      "region": "central",
+      "goals": [
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Canh bí đỏ đậu phộng hầm chay",
+      "prepTimeMinutes": 20,
+      "baseNutrition": {
+        "calories": 95.0,
+        "proteinGrams": 4.0,
+        "carbsGrams": 12.0,
+        "fatGrams": 3.5,
+        "fiberGrams": 2.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsoup_004_1",
+          "name": "Bí đỏ",
+          "amount": 95.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsoup_004_2",
+          "name": "Lạc sống",
+          "amount": 12.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_vsoup_004_3",
+          "name": "Hành lá",
+          "amount": 10.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsoup_004_4",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Giã dập lạc sống đã ngâm nước ấm rồi ninh trong nước lọc khoảng 10 phút.",
+        "Thả bí đỏ cắt miếng vuông vào đun tiếp 8 phút cho bí bở ngọt.",
+        "Nêm muối nhạt vừa ăn và rắc hành lá cắt nhỏ."
+      ]
+    },
+    {
+      "id": "vn_vsoup_005",
+      "slotRole": "soup",
+      "region": "central",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Canh bầu nấu nấm bào ngư chay",
+      "prepTimeMinutes": 12,
+      "baseNutrition": {
+        "calories": 50.0,
+        "proteinGrams": 3.0,
+        "carbsGrams": 7.0,
+        "fatGrams": 1.0,
+        "fiberGrams": 2.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsoup_005_1",
+          "name": "Quả bầu tươi",
+          "amount": 105.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsoup_005_2",
+          "name": "Nấm bào ngư",
+          "amount": 45.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsoup_005_3",
+          "name": "Hành lá",
+          "amount": 10.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsoup_005_4",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Gọt vỏ quả bầu thái miếng mỏng và xé nhỏ nấm bào ngư rửa sạch.",
+        "Đun sôi nước lọc cùng nấm bào ngư khoảng 3 phút cho ngọt nước.",
+        "Cho bầu vào đun sôi thêm 3 phút cho chín mềm, nêm nhạt và rắc hành lá."
+      ]
+    },
+    {
+      "id": "vn_vsoup_006",
+      "slotRole": "soup",
+      "region": "central",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Canh rau dền nấu đậu hũ non chay",
+      "prepTimeMinutes": 10,
+      "baseNutrition": {
+        "calories": 60.0,
+        "proteinGrams": 5.0,
+        "carbsGrams": 6.0,
+        "fatGrams": 2.0,
+        "fiberGrams": 2.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsoup_006_1",
+          "name": "Rau dền đỏ",
+          "amount": 85.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsoup_006_2",
+          "name": "Đậu hũ non",
+          "amount": 60.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_vsoup_006_3",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Nhặt lấy ngọn non và lá rau dền đỏ, rửa sạch rồi để ráo.",
+        "Đun sôi nước lọc, thả rau dền vào nấu 3 phút cho chín mềm.",
+        "Cho đậu hũ non cắt miếng vào đun sôi nhẹ trở lại, nêm gia vị vừa miệng."
+      ]
+    },
+    {
+      "id": "vn_vsoup_007",
+      "slotRole": "soup",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Canh chua chay đậu hũ nấm rơm",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 85.0,
+        "proteinGrams": 6.0,
+        "carbsGrams": 9.0,
+        "fatGrams": 2.5,
+        "fiberGrams": 2.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsoup_007_1",
+          "name": "Đậu hũ",
+          "amount": 55.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_vsoup_007_2",
+          "name": "Nấm rơm",
+          "amount": 40.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsoup_007_3",
+          "name": "Cà chua",
+          "amount": 40.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsoup_007_4",
+          "name": "Đậu bắp",
+          "amount": 40.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsoup_007_5",
+          "name": "Giá đỗ",
+          "amount": 35.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsoup_007_6",
+          "name": "Nước cốt me",
+          "amount": 15.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        },
+        {
+          "id": "ing_vsoup_007_7",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Đun sôi nước lọc cùng nước cốt me, cà chua bổ múi cau và nấm rơm trong 4 phút.",
+        "Cho đậu hũ cắt khối và đậu bắp cắt vát vào đun thêm 3 phút, nêm chua ngọt dịu.",
+        "Thả giá đỗ vào tắt bếp ngay để giữ độ giòn mát."
+      ]
+    },
+    {
+      "id": "vn_vsoup_008",
+      "slotRole": "soup",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Canh nấm rau củ thập cẩm chay",
+      "prepTimeMinutes": 18,
+      "baseNutrition": {
+        "calories": 75.0,
+        "proteinGrams": 3.5,
+        "carbsGrams": 13.0,
+        "fatGrams": 1.0,
+        "fiberGrams": 3.5
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsoup_008_1",
+          "name": "Cà rốt",
+          "amount": 50.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsoup_008_2",
+          "name": "Củ cải trắng",
+          "amount": 50.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsoup_008_3",
+          "name": "Bông cải xanh",
+          "amount": 45.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsoup_008_4",
+          "name": "Nấm hương tươi",
+          "amount": 35.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsoup_008_5",
+          "name": "Nước lọc",
+          "amount": 280.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Cắt miếng vừa ăn cà rốt và củ cải trắng rồi hầm trong nước lọc 10 phút cho ngọt nước.",
+        "Thêm nấm hương tươi và bông cải xanh vào nấu thêm 4 phút cho chín tới.",
+        "Nêm muối nhạt và chút tiêu xay trước khi dọn nóng."
+      ]
+    },
+    {
+      "id": "vn_vsoup_009",
+      "slotRole": "soup",
+      "region": "south",
+      "goals": [
+        "loseWeight",
+        "maintain",
+        "gainWeight"
+      ],
+      "isVegetarian": true,
+      "name": "Canh khổ qua nấu nấm hương đậu hũ",
+      "prepTimeMinutes": 15,
+      "baseNutrition": {
+        "calories": 70.0,
+        "proteinGrams": 6.0,
+        "carbsGrams": 7.0,
+        "fatGrams": 2.0,
+        "fiberGrams": 3.0
+      },
+      "ingredients": [
+        {
+          "id": "ing_vsoup_009_1",
+          "name": "Khổ qua",
+          "amount": 85.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsoup_009_2",
+          "name": "Đậu hũ",
+          "amount": 55.0,
+          "unit": "g",
+          "category": "Đạm"
+        },
+        {
+          "id": "ing_vsoup_009_3",
+          "name": "Nấm hương tươi",
+          "amount": 35.0,
+          "unit": "g",
+          "category": "Rau củ"
+        },
+        {
+          "id": "ing_vsoup_009_4",
+          "name": "Nước lọc",
+          "amount": 260.0,
+          "unit": "ml",
+          "category": "Gia vị"
+        }
+      ],
+      "steps": [
+        "Bỏ ruột khổ qua, thái lát vừa ăn và ngâm nhanh trong nước mát.",
+        "Đun sôi nước lọc cùng nấm hương tươi và khổ qua khoảng 6 phút cho mềm dịu.",
+        "Thả đậu hũ cắt miếng vào đun sôi lại 2 phút, nêm gia vị thanh nhẹ."
       ]
     }
   ]

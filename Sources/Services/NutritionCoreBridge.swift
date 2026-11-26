@@ -62,8 +62,10 @@ enum NutritionCoreBridge: Sendable {
 
         return Dish(
             id: dish.id,
-            mealTypes: dish.mealTypes,
-            dietTags: dish.dietTags,
+            slotRole: dish.slotRole,
+            region: dish.region,
+            goals: dish.goals,
+            isVegetarian: dish.isVegetarian,
             name: dish.name,
             prepTimeMinutes: dish.prepTimeMinutes,
             baseNutrition: scaledNutrition,

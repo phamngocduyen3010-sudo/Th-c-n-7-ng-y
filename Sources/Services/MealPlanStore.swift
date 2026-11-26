@@ -1,13 +1,30 @@
 import Combine
 import Foundation
 
+struct ScaledTrayItem: Identifiable, Sendable {
+    let target: TraySlotTarget
+    let dish: Dish
+
+    var id: String {
+        "\(target.displayLabel)_\(dish.id)"
+    }
+}
+
+struct DayMealDetails: Sendable {
+    let slot: DailyMealSlot
+    let evaluation: EvaluatedNutrition
+    let breakfast: Dish?
+    let lunchItems: [ScaledTrayItem]
+    let dinnerItems: [ScaledTrayItem]
+}
+
 @MainActor
 final class MealPlanStore: ObservableObject {
     private enum StorageKey {
         static let profile = "td_user_profile_v1"
         static let onboardingDone = "td_onboarding_done_v1"
-        static let weeklyPlan = "td_weekly_plan_v1"
-        static let checkedShopping = "td_checked_shopping_v1"
+        static let weeklyPlan = "td_weekly_plan_v2"
+        static let checkedShopping = "td_checked_shopping_v2"
     }
 
     @Published var profile: UserNutritionProfile
@@ -17,9 +34,9 @@ final class MealPlanStore: ObservableObject {
     @Published var checkedShoppingIds: Set<String>
     @Published var loadErrorMessage: String?
 
+    private var rotationSeed: Int = 0
     private let defaults: UserDefaults
     private let encoder = JSONEncoder()
-    private let decoder = JSONDecoder()
 
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
@@ -38,7 +55,10 @@ final class MealPlanStore: ObservableObject {
                 goal: .loseWeight,
                 familyMembers: 1,
                 regionCode: "vn",
-                unitSystem: .metric
+                unitSystem: .metric,
+                cuisineRegion: .all,
+                isVegetarian: false,
+                breakfastPreference: .mixed
             )
         }
         self.profile = savedProfile
@@ -56,7 +76,7 @@ final class MealPlanStore: ObservableObject {
             loadedCatalog = try MenuLoader.loadCatalog(regionCode: savedProfile.regionCode)
             self.loadErrorMessage = nil
         } catch {
-            loadedCatalog = MenuCatalog(regionCode: savedProfile.regionCode, version: "1.0", dishes: [])
+            loadedCatalog = MenuCatalog(regionCode: savedProfile.regionCode, version: "3.0", dishes: [])
             self.loadErrorMessage = error.localizedDescription
         }
         self.catalog = loadedCatalog
@@ -72,6 +92,11 @@ final class MealPlanStore: ObservableObject {
 
     func saveProfile(_ updatedProfile: UserNutritionProfile, regeneratePlan: Bool = true) {
         let regionChanged = updatedProfile.regionCode != profile.regionCode
+        let menuFilterChanged = updatedProfile.cuisineRegion != profile.cuisineRegion
+            || updatedProfile.isVegetarian != profile.isVegetarian
+            || updatedProfile.breakfastPreference != profile.breakfastPreference
+            || updatedProfile.goal != profile.goal
+
         profile = updatedProfile
         hasCompletedOnboarding = true
         defaults.set(true, forKey: StorageKey.onboardingDone)
@@ -86,8 +111,9 @@ final class MealPlanStore: ObservableObject {
             }
         }
 
-        if regeneratePlan || currentPlan.days.count != 7 {
-            currentPlan = MenuLoader.generateWeeklyPlan(for: updatedProfile, catalog: catalog)
+        if regeneratePlan || menuFilterChanged || currentPlan.days.count != 7 {
+            rotationSeed += 1
+            currentPlan = MenuLoader.generateWeeklyPlan(for: updatedProfile, catalog: catalog, seed: rotationSeed)
             checkedShoppingIds = []
             persistCheckedShopping()
         } else {
@@ -107,8 +133,31 @@ final class MealPlanStore: ObservableObject {
         persistPlan()
     }
 
+    func updateCuisineRegion(_ region: VietnameseCuisineRegion) {
+        guard region != profile.cuisineRegion else { return }
+        profile.cuisineRegion = region
+        rotationSeed = 0
+        currentPlan = MenuLoader.generateWeeklyPlan(for: profile, catalog: catalog, seed: rotationSeed)
+        checkedShoppingIds = []
+        persistProfile()
+        persistPlan()
+        persistCheckedShopping()
+    }
+
+    func updateVegetarian(_ isVeg: Bool) {
+        guard isVeg != profile.isVegetarian else { return }
+        profile.isVegetarian = isVeg
+        rotationSeed = 0
+        currentPlan = MenuLoader.generateWeeklyPlan(for: profile, catalog: catalog, seed: rotationSeed)
+        checkedShoppingIds = []
+        persistProfile()
+        persistPlan()
+        persistCheckedShopping()
+    }
+
     func regenerateWeeklyPlan() {
-        currentPlan = MenuLoader.generateWeeklyPlan(for: profile, catalog: catalog)
+        rotationSeed += 1
+        currentPlan = MenuLoader.generateWeeklyPlan(for: profile, catalog: catalog, seed: rotationSeed)
         checkedShoppingIds = []
         persistPlan()
         persistCheckedShopping()
@@ -124,50 +173,102 @@ final class MealPlanStore: ObservableObject {
         persistPlan()
     }
 
-    func swapDish(dayIndex: Int, mealType: MealType, newDishId: String) {
+    func swapDish(dayIndex: Int, mealType: MealType, target: TraySlotTarget, newDishId: String) {
         guard let idx = currentPlan.days.firstIndex(where: { $0.dayIndex == dayIndex }) else { return }
         switch mealType {
         case .breakfast:
             currentPlan.days[idx].breakfastId = newDishId
         case .lunch:
-            currentPlan.days[idx].lunchId = newDishId
+            applySwap(&currentPlan.days[idx].lunchTray, target: target, newDishId: newDishId)
         case .dinner:
-            currentPlan.days[idx].dinnerId = newDishId
+            applySwap(&currentPlan.days[idx].dinnerTray, target: target, newDishId: newDishId)
         case .snack:
             break
         }
         persistPlan()
     }
 
+    private func applySwap(_ tray: inout MealTray, target: TraySlotTarget, newDishId: String) {
+        switch target {
+        case .rice:
+            tray.riceId = newDishId
+        case .savory(let index):
+            if index >= 0 && index < tray.savoryIds.count {
+                tray.savoryIds[index] = newDishId
+            }
+        case .soup:
+            tray.soupId = newDishId
+        case .fruit:
+            tray.fruitId = newDishId
+        case .breakfast:
+            break
+        }
+    }
+
+    func excludedIdsForSwap(dayIndex: Int, mealType: MealType, currentDishId: String) -> Set<String> {
+        guard let slot = currentPlan.days.first(where: { $0.dayIndex == dayIndex }) else {
+            return [currentDishId]
+        }
+        switch mealType {
+        case .breakfast:
+            return [currentDishId]
+        case .lunch:
+            return Set(slot.lunchTray.allDishIds).union([currentDishId])
+        case .dinner:
+            return Set(slot.dinnerTray.allDishIds).union([currentDishId])
+        case .snack:
+            return [currentDishId]
+        }
+    }
+
     func dish(byId id: String) -> Dish? {
         catalog.dishes.first { $0.id == id }
     }
 
-    func dayDetails(for dayIndex: Int) -> (slot: DailyMealSlot, evaluation: EvaluatedNutrition, meals: [(MealType, Dish)])? {
+    func dayDetails(for dayIndex: Int) -> DayMealDetails? {
         guard let slot = currentPlan.days.first(where: { $0.dayIndex == dayIndex }) else { return nil }
-        let pairs: [(MealType, String)] = [
-            (.breakfast, slot.breakfastId),
-            (.lunch, slot.lunchId),
-            (.dinner, slot.dinnerId)
-        ]
-        let rawDishes: [(MealType, Dish)] = pairs.compactMap { mealType, dishId in
-            guard let found = dish(byId: dishId) else { return nil }
-            return (mealType, found)
-        }
-        let baseCalories = rawDishes.reduce(0.0) { $0 + $1.1.baseNutrition.calories }
+        let rawAll = slot.allDishIds.compactMap { dish(byId: $0) }
+        let baseCalories = rawAll.reduce(0.0) { $0 + $1.baseNutrition.calories }
         let eval = NutritionCoreBridge.evaluate(
             profile: profile,
             baseDayCalories: baseCalories > 0.0 ? baseCalories : 1600.0
         )
-        let scaledMeals: [(MealType, Dish)] = rawDishes.map { mealType, rawDish in
-            let scaled = NutritionCoreBridge.scaledDish(
-                rawDish,
+
+        func scaled(_ id: String) -> Dish? {
+            guard let raw = dish(byId: id) else { return nil }
+            return NutritionCoreBridge.scaledDish(
+                raw,
                 multiplier: eval.servingMultiplier,
                 familyMembers: profile.familyMembers
             )
-            return (mealType, scaled)
         }
-        return (slot, eval, scaledMeals)
+
+        func buildTrayItems(_ tray: MealTray) -> [ScaledTrayItem] {
+            var items: [ScaledTrayItem] = []
+            if let rice = scaled(tray.riceId) {
+                items.append(ScaledTrayItem(target: .rice, dish: rice))
+            }
+            for (i, savId) in tray.savoryIds.enumerated() {
+                if let sav = scaled(savId) {
+                    items.append(ScaledTrayItem(target: .savory(index: i), dish: sav))
+                }
+            }
+            if let soup = scaled(tray.soupId) {
+                items.append(ScaledTrayItem(target: .soup, dish: soup))
+            }
+            if let fruit = scaled(tray.fruitId) {
+                items.append(ScaledTrayItem(target: .fruit, dish: fruit))
+            }
+            return items
+        }
+
+        return DayMealDetails(
+            slot: slot,
+            evaluation: eval,
+            breakfast: scaled(slot.breakfastId),
+            lunchItems: buildTrayItems(slot.lunchTray),
+            dinnerItems: buildTrayItems(slot.dinnerTray)
+        )
     }
 
     func shoppingItems() -> [ShoppingListItem] {

@@ -13,6 +13,9 @@ struct OnboardingView: View {
     @State private var goal: NutritionGoal
     @State private var familyMembers: Int
     @State private var unitSystem: UnitSystem
+    @State private var cuisineRegion: VietnameseCuisineRegion
+    @State private var isVegetarian: Bool
+    @State private var breakfastPreference: BreakfastPreference
 
     init(store: MealPlanStore, isModalEdit: Bool = false) {
         self.store = store
@@ -26,6 +29,9 @@ struct OnboardingView: View {
         _goal = State(initialValue: p.goal)
         _familyMembers = State(initialValue: p.familyMembers)
         _unitSystem = State(initialValue: p.unitSystem)
+        _cuisineRegion = State(initialValue: p.cuisineRegion)
+        _isVegetarian = State(initialValue: p.isVegetarian)
+        _breakfastPreference = State(initialValue: p.breakfastPreference)
     }
 
     private var draftProfile: UserNutritionProfile {
@@ -38,7 +44,10 @@ struct OnboardingView: View {
             goal: goal,
             familyMembers: familyMembers,
             regionCode: store.profile.regionCode,
-            unitSystem: unitSystem
+            unitSystem: unitSystem,
+            cuisineRegion: cuisineRegion,
+            isVegetarian: isVegetarian,
+            breakfastPreference: breakfastPreference
         )
     }
 
@@ -87,13 +96,27 @@ struct OnboardingView: View {
                     }
                 }
 
-                Section("Mục tiêu & Khẩu phần") {
+                Section("Mục tiêu & Chế độ ăn") {
                     Picker("Mục tiêu", selection: $goal) {
                         Text("Giảm cân").tag(NutritionGoal.loseWeight)
                         Text("Giữ cân").tag(NutritionGoal.maintain)
                         Text("Tăng cân").tag(NutritionGoal.gainWeight)
                     }
                     .pickerStyle(.segmented)
+
+                    Toggle("Chế độ ăn chay", isOn: $isVegetarian)
+
+                    Picker("Khẩu vị vùng miền", selection: $cuisineRegion) {
+                        ForEach(VietnameseCuisineRegion.allCases, id: \.self) { region in
+                            Text(region.displayTitle).tag(region)
+                        }
+                    }
+
+                    Picker("Bữa sáng ưu tiên", selection: $breakfastPreference) {
+                        ForEach(BreakfastPreference.allCases, id: \.self) { pref in
+                            Text(pref.displayTitle).tag(pref)
+                        }
+                    }
 
                     Picker("Mức vận động", selection: $activityLevel) {
                         Text("Ít vận động").tag(ActivityLevel.sedentary)
@@ -144,7 +167,7 @@ struct OnboardingView: View {
                         }
                     }
                 } header: {
-                    Text("Ước tính dinh dưỡng (Lõi C · Mifflin-St Jeor)")
+                    Text("Ước tính dinh dưỡng (Mifflin-St Jeor)")
                 } footer: {
                     Text("Mức giảm cân luôn giữ sàn an toàn tối thiểu 1.200 kcal/ngày. Chỉ số chỉ mang tính tham khảo lập thực đơn, không thay thế tư vấn bác sĩ.")
                 }

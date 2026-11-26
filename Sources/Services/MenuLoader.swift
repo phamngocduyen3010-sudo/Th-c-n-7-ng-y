@@ -45,40 +45,118 @@ enum MenuLoader: Sendable {
         }
     }
 
+    static func breakfastRoles(for preference: BreakfastPreference) -> Set<DishSlotRole> {
+        switch preference {
+        case .mixed:
+            return [.breakfastStreet, .breakfastHome]
+        case .street:
+            return [.breakfastStreet]
+        case .home:
+            return [.breakfastHome]
+        }
+    }
+
+    static func filteredPool(
+        from catalog: MenuCatalog,
+        roles: Set<DishSlotRole>,
+        profile: UserNutritionProfile,
+        minCount: Int = 1
+    ) -> [Dish] {
+        // Hard constraints: exact slot role + strict vegetarian separation when enabled
+        let base = catalog.dishes.filter { dish in
+            roles.contains(dish.slotRole) && (!profile.isVegetarian || dish.isVegetarian)
+        }
+        guard !base.isEmpty else { return [] }
+
+        let regionMatches: [Dish]
+        if profile.cuisineRegion == .all {
+            regionMatches = base
+        } else {
+            let targetRegion = profile.cuisineRegion.rawValue
+            let filtered = base.filter { $0.region == targetRegion || $0.region == "all" }
+            regionMatches = filtered.count >= minCount ? filtered : base
+        }
+
+        let goalAndRegion = regionMatches.filter { $0.goals.contains(profile.goal) }
+        if goalAndRegion.count >= minCount {
+            return goalAndRegion
+        }
+
+        let goalAnyRegion = base.filter { $0.goals.contains(profile.goal) }
+        if goalAnyRegion.count >= minCount && profile.cuisineRegion == .all {
+            return goalAnyRegion
+        }
+
+        return regionMatches.count >= minCount ? regionMatches : base
+    }
+
     static func generateWeeklyPlan(
         for profile: UserNutritionProfile,
         catalog: MenuCatalog,
-        startDate: Date = Date()
+        startDate: Date = Date(),
+        seed: Int = 0
     ) -> WeeklyMealPlan {
         let evaluation = NutritionCoreBridge.evaluate(profile: profile)
-        let breakfasts = catalog.dishes.filter { $0.mealTypes.contains(.breakfast) }
-        let lunches = catalog.dishes.filter { $0.mealTypes.contains(.lunch) }
-        let dinners = catalog.dishes.filter { $0.mealTypes.contains(.dinner) }
+        let bRoles = breakfastRoles(for: profile.breakfastPreference)
+
+        var breakfasts = filteredPool(from: catalog, roles: bRoles, profile: profile, minCount: 2)
+        if breakfasts.isEmpty {
+            breakfasts = filteredPool(from: catalog, roles: [.breakfastStreet, .breakfastHome], profile: profile, minCount: 1)
+        }
+
+        let rices = filteredPool(from: catalog, roles: [.stapleRice], profile: profile, minCount: 1)
+        let savories = filteredPool(from: catalog, roles: [.mainSavory], profile: profile, minCount: 6)
+        let soups = filteredPool(from: catalog, roles: [.soup], profile: profile, minCount: 2)
+        let fruits = filteredPool(from: catalog, roles: [.fruit], profile: profile, minCount: 2)
 
         var slots: [DailyMealSlot] = []
         var prevBreakfast: String?
-        var prevLunch: String?
-        var prevDinner: String?
+        let safeSeed = max(0, seed)
 
         for dayIndex in 1...7 {
-            let bDish = pickNonConsecutive(from: breakfasts, dayIndex: dayIndex, previousId: prevBreakfast)
-            let lDish = pickNonConsecutive(from: lunches, dayIndex: dayIndex, previousId: prevLunch)
-            let dDish = pickNonConsecutive(from: dinners, dayIndex: dayIndex, previousId: prevDinner)
+            let dayOffset = (dayIndex - 1) + safeSeed * 7
 
+            let bDish = pickSingle(from: breakfasts, offset: dayOffset, excluding: prevBreakfast.map { [$0] } ?? [])
             let bId = bDish?.id ?? ""
-            let lId = lDish?.id ?? ""
-            let dId = dDish?.id ?? ""
-
             prevBreakfast = bId
-            prevLunch = lId
-            prevDinner = dId
+
+            // Lunch Tray: 1 Rice + 3 Distinct Savory + 1 Soup + 1 Fruit
+            let lunchRice = pickSingle(from: rices, offset: dayOffset, excluding: [])?.id ?? ""
+            let lunchSavories = pickDistinct(from: savories, count: 3, startOffset: dayOffset * 3, excluding: [])
+            let lunchSoup = pickSingle(from: soups, offset: dayOffset * 2, excluding: [])?.id ?? ""
+            let lunchFruit = pickSingle(from: fruits, offset: dayOffset * 2, excluding: [])?.id ?? ""
+
+            let lunchTray = MealTray(
+                riceId: lunchRice,
+                savoryIds: lunchSavories,
+                soupId: lunchSoup,
+                fruitId: lunchFruit
+            )
+
+            // Dinner Tray: 1 Rice + 3 Distinct Savory (avoiding lunch savories) + 1 Soup + 1 Fruit
+            let dinnerRice = pickSingle(from: rices, offset: dayOffset + 1, excluding: [])?.id ?? ""
+            let dinnerSavories = pickDistinct(
+                from: savories,
+                count: 3,
+                startOffset: dayOffset * 3 + 3,
+                excluding: Set(lunchSavories)
+            )
+            let dinnerSoup = pickSingle(from: soups, offset: dayOffset * 2 + 1, excluding: [lunchSoup])?.id ?? ""
+            let dinnerFruit = pickSingle(from: fruits, offset: dayOffset * 2 + 1, excluding: [lunchFruit])?.id ?? ""
+
+            let dinnerTray = MealTray(
+                riceId: dinnerRice,
+                savoryIds: dinnerSavories,
+                soupId: dinnerSoup,
+                fruitId: dinnerFruit
+            )
 
             slots.append(
                 DailyMealSlot(
                     dayIndex: dayIndex,
                     breakfastId: bId,
-                    lunchId: lId,
-                    dinnerId: dId,
+                    lunchTray: lunchTray,
+                    dinnerTray: dinnerTray,
                     completedMeals: []
                 )
             )
@@ -95,28 +173,70 @@ enum MenuLoader: Sendable {
     }
 
     static func alternativeDishes(
-        for mealType: MealType,
-        excluding dishId: String,
-        in catalog: MenuCatalog
+        for target: TraySlotTarget,
+        excluding excludedIds: Set<String>,
+        in catalog: MenuCatalog,
+        profile: UserNutritionProfile
     ) -> [Dish] {
-        catalog.dishes.filter { dish in
-            dish.mealTypes.contains(mealType) && dish.id != dishId
+        let roles: Set<DishSlotRole>
+        switch target {
+        case .breakfast:
+            roles = breakfastRoles(for: profile.breakfastPreference)
+        case .rice:
+            roles = [.stapleRice]
+        case .savory:
+            roles = [.mainSavory]
+        case .soup:
+            roles = [.soup]
+        case .fruit:
+            roles = [.fruit]
         }
+
+        let pool = filteredPool(from: catalog, roles: roles, profile: profile, minCount: 2)
+        return pool.filter { !excludedIds.contains($0.id) }
     }
 
-    private static func pickNonConsecutive(
+    private static func pickSingle(
         from pool: [Dish],
-        dayIndex: Int,
-        previousId: String?
+        offset: Int,
+        excluding excluded: Set<String>
     ) -> Dish? {
         guard !pool.isEmpty else { return nil }
-        if pool.count == 1 { return pool[0] }
-
-        let startOffset = (dayIndex - 1) % pool.count
-        let candidate = pool[startOffset]
-        if candidate.id != previousId {
-            return candidate
+        for step in 0..<pool.count {
+            let candidate = pool[(offset + step) % pool.count]
+            if !excluded.contains(candidate.id) {
+                return candidate
+            }
         }
-        return pool[(startOffset + 1) % pool.count]
+        return pool[offset % pool.count]
+    }
+
+    private static func pickDistinct(
+        from pool: [Dish],
+        count: Int,
+        startOffset: Int,
+        excluding excluded: Set<String>
+    ) -> [String] {
+        guard !pool.isEmpty else { return [] }
+        var picked: [String] = []
+        var used = excluded
+
+        for step in 0..<pool.count where picked.count < count {
+            let candidate = pool[(startOffset + step) % pool.count]
+            if !used.contains(candidate.id) {
+                picked.append(candidate.id)
+                used.insert(candidate.id)
+            }
+        }
+
+        // If pool is small, fill remaining avoiding duplicates within the same tray
+        for step in 0..<pool.count where picked.count < count {
+            let candidate = pool[(startOffset + step) % pool.count]
+            if !picked.contains(candidate.id) {
+                picked.append(candidate.id)
+            }
+        }
+
+        return picked
     }
 }

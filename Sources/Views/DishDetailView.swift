@@ -4,6 +4,7 @@ struct DishDetailView: View {
     @ObservedObject var store: MealPlanStore
     let dayIndex: Int
     let mealType: MealType
+    let target: TraySlotTarget
     let scaledDish: Dish
 
     @Environment(\.dismiss) private var dismiss
@@ -13,7 +14,17 @@ struct DishDetailView: View {
     }
 
     private var alternatives: [Dish] {
-        MenuLoader.alternativeDishes(for: mealType, excluding: scaledDish.id, in: store.catalog)
+        let excluded = store.excludedIdsForSwap(
+            dayIndex: dayIndex,
+            mealType: mealType,
+            currentDishId: scaledDish.id
+        )
+        return MenuLoader.alternativeDishes(
+            for: target,
+            excluding: excluded,
+            in: store.catalog,
+            profile: store.profile
+        )
     }
 
     private func formatAmount(_ amount: Double) -> String {
@@ -26,6 +37,12 @@ struct DishDetailView: View {
     var body: some View {
         List {
             Section("Dinh dưỡng (1 người / \(store.profile.familyMembers) người)") {
+                HStack {
+                    Text("Nhóm món")
+                    Spacer()
+                    Text(scaledDish.slotRole.displayTitle)
+                        .foregroundStyle(.secondary)
+                }
                 HStack {
                     Text("Năng lượng")
                     Spacer()
@@ -83,10 +100,10 @@ struct DishDetailView: View {
             }
 
             if !alternatives.isEmpty {
-                Section("Đổi sang món khác cùng bữa") {
+                Section("Đổi sang món khác (\(target.displayLabel))") {
                     ForEach(alternatives) { alt in
                         Button {
-                            store.swapDish(dayIndex: dayIndex, mealType: mealType, newDishId: alt.id)
+                            store.swapDish(dayIndex: dayIndex, mealType: mealType, target: target, newDishId: alt.id)
                             dismiss()
                         } label: {
                             HStack {

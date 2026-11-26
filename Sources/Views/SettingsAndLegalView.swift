@@ -22,7 +22,8 @@ struct SettingsAndLegalView: View {
                             VStack(alignment: .leading, spacing: 2) {
                                 Text("Chỉnh sửa chỉ số & mục tiêu")
                                     .foregroundStyle(.primary)
-                                Text("\(Int(store.profile.heightCm.rounded())) cm · \(Int(store.profile.weightKg.rounded())) kg · \(store.profile.familyMembers) người")
+                                let vegText = store.profile.isVegetarian ? " · Ăn chay" : ""
+                                Text("\(Int(store.profile.heightCm.rounded())) cm · \(Int(store.profile.weightKg.rounded())) kg · \(store.profile.cuisineRegion.displayTitle)\(vegText)")
                                     .font(.caption)
                                     .foregroundStyle(.secondary)
                                     .monospacedDigit()
@@ -35,7 +36,7 @@ struct SettingsAndLegalView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Cơ sở tính toán")
                             .font(.subheadline.weight(.semibold))
-                        Text("Chỉ số BMR và TDEE được tính theo công thức Mifflin-St Jeor (1990) trên lõi C cục bộ. Mức giảm cân luôn duy trì sàn tối thiểu 1.200 kcal/ngày. Thành phần dinh dưỡng tham chiếu từ bảng thành phần thực phẩm phổ thông (Viện Dinh dưỡng & USDA FoodData Central).")
+                        Text("Chỉ số BMR và TDEE được tính theo công thức Mifflin-St Jeor (1990) cục bộ trên thiết bị. Mức giảm cân luôn duy trì sàn tối thiểu 1.200 kcal/ngày. Thành phần dinh dưỡng tham chiếu từ bảng thành phần thực phẩm phổ thông (Viện Dinh dưỡng & USDA FoodData Central).")
                             .font(.footnote)
                             .foregroundStyle(.secondary)
                     }
@@ -96,6 +97,13 @@ struct SettingsAndLegalView: View {
                 }
 
                 Section("Thông tin ứng dụng") {
+                    HStack {
+                        Text("Kho món ăn")
+                        Spacer()
+                        Text("\(store.catalog.dishes.count) món Việt (3 miền & chay)")
+                            .foregroundStyle(.secondary)
+                            .monospacedDigit()
+                    }
                     HStack {
                         Text("Phiên bản")
                         Spacer()

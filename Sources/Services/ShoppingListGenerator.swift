@@ -26,7 +26,7 @@ enum ShoppingListGenerator: Sendable {
         var buckets: [String: AggregationBucket] = [:]
 
         for day in plan.days {
-            let dayDishes = [day.breakfastId, day.lunchId, day.dinnerId].compactMap { dishById[$0] }
+            let dayDishes = day.allDishIds.compactMap { dishById[$0] }
             let baseDayCalories = dayDishes.reduce(0.0) { $0 + $1.baseNutrition.calories }
             let evaluation = NutritionCoreBridge.evaluate(
                 profile: profile,
