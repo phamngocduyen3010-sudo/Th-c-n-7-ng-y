@@ -5,6 +5,11 @@ options:
     iOS: "17.0"
   xcodeVersion: "16.0"
 
+packages:
+  GoogleMobileAds:
+    url: https://github.com/googleads/swift-package-manager-google-mobile-ads.git
+    from: "12.0.0"
+
 settings:
   base:
     SWIFT_VERSION: "6.0"
@@ -17,13 +22,16 @@ targets:
     platform: iOS
     sources:
       - path: Sources
+    dependencies:
+      - package: GoogleMobileAds
+        product: GoogleMobileAds
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: vn.thucdon7ngay.app
-        INFOPLIST_KEY_CFBundleDisplayName: "Thực Đơn 7 Ngày"
-        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_FILE: Sources/Resources/Info.plist
         SWIFT_OBJC_BRIDGING_HEADER: Sources/CoreC/ThucDonBridging.h
         HEADER_SEARCH_PATHS: $(SRCROOT)/Sources/CoreC
+        TARGETED_DEVICE_FAMILY: "1"
 
   ThucDon7NgayTests:
     type: bundle.unit-test
