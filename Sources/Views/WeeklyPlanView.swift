@@ -2,6 +2,7 @@ import SwiftUI
 
 struct WeeklyPlanView: View {
     @ObservedObject var store: MealPlanStore
+    @EnvironmentObject private var adManager: MealAdManager
     @State private var selectedDay: Int = 1
 
     private func goalTitle(_ goal: NutritionGoal) -> String {
@@ -29,7 +30,10 @@ struct WeeklyPlanView: View {
                         HStack(spacing: 8) {
                             ForEach(1...7, id: \.self) { day in
                                 Button {
-                                    selectedDay = day
+                                    if selectedDay != day {
+                                        selectedDay = day
+                                        adManager.recordInteraction()
+                                    }
                                 } label: {
                                     Text("Ngày \(day)")
                                         .font(.subheadline.weight(.semibold))
@@ -173,6 +177,7 @@ struct WeeklyPlanView: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         store.regenerateWeeklyPlan()
+                        adManager.recordInteraction()
                     } label: {
                         Image(systemName: "arrow.triangle.2.circlepath")
                     }
